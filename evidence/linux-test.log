@@ -1,0 +1,83 @@
+
+> codexless@0.1.2-preview.1 test:linux
+> node test/linux-core-security.mjs && node --test test/linux-lifecycle.mjs test/linux-app-server-cleanup.mjs && node test/linux-mcp-integration.mjs
+
+Linux core security passed: identity/XDG, case-sensitive trust, executable mode, symlink boundary, read-only edit, sandboxed edit dispatch, POSIX cleanup
+TAP version 13
+# Subtest: unexpected App Server exit immediately cleans its surviving process group
+ok 1 - unexpected App Server exit immediately cleans its surviving process group
+  ---
+  duration_ms: 64.60369
+  type: 'test'
+  ...
+# Subtest: normal App Server close stops the server and its descendants once
+ok 2 - normal App Server close stops the server and its descendants once
+  ---
+  duration_ms: 42.200387
+  type: 'test'
+  ...
+# Subtest: stubborn App Server close stops the server and its descendants once
+ok 3 - stubborn App Server close stops the server and its descendants once
+  ---
+  duration_ms: 2037.352916
+  type: 'test'
+  ...
+# Subtest: signal failures still execute launch-factory cleanup
+ok 4 - signal failures still execute launch-factory cleanup
+  ---
+  duration_ms: 1037.986249
+  type: 'test'
+  ...
+# Subtest: Linux lifecycle uses absolute XDG paths, loopback, a separate Codex home and a quoted systemd unit
+ok 5 - Linux lifecycle uses absolute XDG paths, loopback, a separate Codex home and a quoted systemd unit
+  ---
+  duration_ms: 2.004242
+  type: 'test'
+  ...
+# Subtest: core lifecycle preserves optional integration configurations without loading their implementation
+ok 6 - core lifecycle preserves optional integration configurations without loading their implementation
+  ---
+  duration_ms: 25.17488
+  type: 'test'
+  ...
+# Subtest: install, stdio, idempotent reinstall, guarded update, rollback and uninstall preserve user state
+ok 7 - install, stdio, idempotent reinstall, guarded update, rollback and uninstall preserve user state
+  ---
+  duration_ms: 14651.382121
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14760.419269
+PASS stdio initialize / independent server identity
+PASS tools/list public contract
+PASS uname -s
+PASS uname -a
+PASS pwd with spaces
+PASS git status / branch
+PASS git commit history read
+PASS project context discovers AGENTS.md
+PASS directory list / file search
+PASS read absolute file and AGENTS.md
+PASS sandboxed create / write verification
+PASS guarded edit preview
+PASS sandboxed guarded edit / verify
+PASS git diff
+PASS authorized move / delete within fixture
+PASS out-of-root / symlink escape rejected
+PASS readOnly command write denied
+PASS nested Codex bypass rejected
+PASS remote permission override rejected by schema
+PASS stderr and nonzero exit propagation
+PASS timeout and command cleanup
+PASS metered model prepare / duplicate / decline without model call
+PASS loopback health / ready / no project path leakage
+PASS HTTP foreign Origin rejected
+PASS HTTP initialize / discovery / actual Linux tool call
+Linux MCP integration PASS (25 checks)

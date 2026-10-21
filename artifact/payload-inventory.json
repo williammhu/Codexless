@@ -1,0 +1,908 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Read-only byte inventory of the existing artifact; this is not a new npm pack, dependency install, service launch, or installation test run.",
+  "artifact": {
+    "filename": "codexless-0.1.2-preview.1.tgz",
+    "sha256": "43c7e2c6fe24a6b87a91bdeccd3fa574f96da6dca887daec9c605ca91ce497d4",
+    "size": 372485
+  },
+  "manifest": {
+    "archivePath": "package/config/release-manifest.json",
+    "extractedFilename": "release-manifest.json",
+    "sha256": "c5702be0cc2f3631ad0d1c4f54098eda31a86693da55247ebcc6df3684730f23",
+    "sourceBytesMatch": true,
+    "payloadFileCount": 124
+  },
+  "sourceIdentity": {
+    "candidateTree": "3f44470de142222788f8f6e22e7926684062ad97",
+    "treeProvenance": "Recorded exact candidate identity from the existing acceptance evidence; not inferred from the npm archive.",
+    "sourceRevision": "394e8f4d356f064c27143a8580c3ba4028373e21",
+    "buildId": "31dc0d0614200479c14822ea5536ffc4abefa0e52af486e9fad2728d7ded1b3d",
+    "version": "0.1.2-preview.1"
+  },
+  "byteAudit": {
+    "regularEntryCount": 125,
+    "manifestedPayloadHashMatches": 124,
+    "linuxLauncherCount": 16,
+    "linuxLaunchersExecutableAndLfOnly": true,
+    "sensitiveStringCheck": "PASS (no matched contents disclosed)",
+    "newRuntimeOrInstallationTestsRun": false
+  },
+  "entries": [
+    {
+      "path": "package/EXPORT_SYNC.md",
+      "sha256": "d4618e85994911b887f02237b3e0a25c50e11cc101cce535d8059888c175aa16",
+      "mode": "0644",
+      "size": 9860,
+      "manifested": true
+    },
+    {
+      "path": "package/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "mode": "0644",
+      "size": 11357,
+      "manifested": true
+    },
+    {
+      "path": "package/README.linux.md",
+      "sha256": "6db25e473643f61fe92ccd0e5963b6fbdeb42613fe795b5bfaa1ca4869cab7b4",
+      "mode": "0644",
+      "size": 7556,
+      "manifested": true
+    },
+    {
+      "path": "package/README.md",
+      "sha256": "fe3f1159c93b278d16b220264d7b8af7538849c576b1829fec0744c82b2925e9",
+      "mode": "0644",
+      "size": 14082,
+      "manifested": true
+    },
+    {
+      "path": "package/README.zh-CN.md",
+      "sha256": "8c7808aa11ec5678c678344413fdf6d1c65d5c3d73a01b97f8be09db1b9d630f",
+      "mode": "0644",
+      "size": 12115,
+      "manifested": true
+    },
+    {
+      "path": "package/SECURITY.md",
+      "sha256": "51f9d33307b2bbe36875b69233ee8339d6399d34727fdc35816ceedd2ff2638c",
+      "mode": "0644",
+      "size": 16542,
+      "manifested": true
+    },
+    {
+      "path": "package/THIRD_PARTY_NOTICES.md",
+      "sha256": "532d98de514ed71e3e30879366c023e028727435853ea5a47c42b67206228235",
+      "mode": "0644",
+      "size": 2770,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-doctor.cmd",
+      "sha256": "8433095510e2bcb5248f9b51c9b23e9db5922bd86a6827e37c1f6fc9ffffa5ef",
+      "mode": "0644",
+      "size": 81,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-doctor.sh",
+      "sha256": "9fddc99ed66e946894a65d5409a4b6cc1a3288ac89ca776987f759e855bb7897",
+      "mode": "0644",
+      "size": 117,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-http.cmd",
+      "sha256": "e87800c1af3eb9e695bf978b3c358906ea64e5516e9f0392348eb936c41f28e7",
+      "mode": "0644",
+      "size": 83,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-http.sh",
+      "sha256": "0f83c8fd03f8c312cb41e86884b73c567196c820508b6b68efa2b2a95463bbf5",
+      "mode": "0644",
+      "size": 122,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-install.cmd",
+      "sha256": "985d96b9dab646c24892f26e068877d3883e0fb06b8d739304163a520f1267eb",
+      "mode": "0644",
+      "size": 129,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-install.sh",
+      "sha256": "878ded26252e2ea54bc8a56d831b08de9af75ae10da1204b8a455a5be2828a92",
+      "mode": "0644",
+      "size": 120,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-disable",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-doctor",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-enable",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-http",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-install",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-login",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-logs",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-restart",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-rollback",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-start",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-status",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-stdio",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-stop",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-uninstall",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-linux-update",
+      "sha256": "de54bcefa7bb5a49dd09af2f5a8a162029236523b170656183131bc61cd2fbe9",
+      "mode": "0755",
+      "size": 820,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-stdio.cmd",
+      "sha256": "8214fb4b7d09d9ef9c797c780db9b7290638a8b6d01807a8febe1cda66167168",
+      "mode": "0644",
+      "size": 84,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-stdio.sh",
+      "sha256": "2857ce33ad30d36ef9345d2e60573a5704a866d1ba4060c2c1d3b8e43deda0b1",
+      "mode": "0644",
+      "size": 123,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-uninstall.cmd",
+      "sha256": "a92c710d0daa1dd592b4c6f12d50b259bfa6b261599fcaa7cf6edb42206cbaf6",
+      "mode": "0644",
+      "size": 131,
+      "manifested": true
+    },
+    {
+      "path": "package/bin/codexless-uninstall.sh",
+      "sha256": "898f9df834f09a54b5ece715d4b2eff5437acce97bb092b859c1888974de204b",
+      "mode": "0644",
+      "size": 122,
+      "manifested": true
+    },
+    {
+      "path": "package/config/linux-runtime.example.json",
+      "sha256": "d2424544feb77564b0090f063d06f28ca08c6deb6e92102a77935d1b04a747a6",
+      "mode": "0644",
+      "size": 229,
+      "manifested": true
+    },
+    {
+      "path": "package/config/release-manifest.json",
+      "sha256": "c5702be0cc2f3631ad0d1c4f54098eda31a86693da55247ebcc6df3684730f23",
+      "mode": "0644",
+      "size": 15981,
+      "manifested": false
+    },
+    {
+      "path": "package/config/runtime-install-mode.json",
+      "sha256": "a14027f1da8d4e01c38f51bbe5978e0737fbaaa90f59d081227677dfc474ae71",
+      "mode": "0644",
+      "size": 50,
+      "manifested": true
+    },
+    {
+      "path": "package/config/runtime-routing-policy.json",
+      "sha256": "b99f7007b78c15e2d3d2678b27076e5ee4472022d976d9f5c19f0fbd71a71b41",
+      "mode": "0644",
+      "size": 1994,
+      "manifested": true
+    },
+    {
+      "path": "package/config/skill-lane-policy.json",
+      "sha256": "f9b5c189c244c13437c2e4296dcc3e5b31d461f42d44a95f93d6f737655a392c",
+      "mode": "0644",
+      "size": 428,
+      "manifested": true
+    },
+    {
+      "path": "package/config/toolbox-method-registry.json",
+      "sha256": "72ed3d39c506473b11d7b15165aadc15a1d3531fa17e18adab5ac99763279ba9",
+      "mode": "0644",
+      "size": 3144,
+      "manifested": true
+    },
+    {
+      "path": "package/npm-shrinkwrap.json",
+      "sha256": "ce7f6ab9dc8ca237ecfb8f396ac9e56706e335309d934e28144b3955112a40cb",
+      "mode": "0644",
+      "size": 20368,
+      "manifested": true
+    },
+    {
+      "path": "package/package.json",
+      "sha256": "5f9cd2ad978900ab7b444b1954a57a79dbe01c992823095cdf2ce969849228a8",
+      "mode": "0644",
+      "size": 4825,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/bootstrap-archive.ps1",
+      "sha256": "c972086d15333bb5a4f14ddeb814500bc25440f77ee13a03c6e3fccca07c59a5",
+      "mode": "0644",
+      "size": 3639,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/bootstrap-archive.sh",
+      "sha256": "b557b54e58097829ff67527cccbd2c4f327c56e0445561b0286b72cd39380ab2",
+      "mode": "0644",
+      "size": 877,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/bootstrap.mjs",
+      "sha256": "0cb1a5152f3ed9e7c18ad37e77300560fd0bd57e22dc5c5f20d0a8baafe817e2",
+      "mode": "0644",
+      "size": 4146,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/check-release.mjs",
+      "sha256": "2aa874631c81910a03ea2485da7412f9591828449a87d5daa162bb324a767b19",
+      "mode": "0644",
+      "size": 1626,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/compatibility-report.mjs",
+      "sha256": "fa01baf8f4080c3b516765f78120e199ab24b3dc652c9ed5f6ea1694dd818d17",
+      "mode": "0644",
+      "size": 125,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/doctor.mjs",
+      "sha256": "2a25f528db1bb5fef10fdde1e505718cbb148dcc74d763b837938d0c57549902",
+      "mode": "0644",
+      "size": 21492,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/generate-release-manifest.mjs",
+      "sha256": "77b380ff6c29ff0900f452ad26536869ab4a81fe22bc198d78a0d36abd715aaa",
+      "mode": "0644",
+      "size": 2108,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/install.ps1",
+      "sha256": "6757598a55b5b9355c1de205f5041d75b26f8bb865d1bc5e59c194d8fdeb5083",
+      "mode": "0644",
+      "size": 30700,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/install.sh",
+      "sha256": "72ba3ace14964fbe032a46b6db303b543cbb79eb0b8b8535eb1e800852978d29",
+      "mode": "0644",
+      "size": 33779,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/launch.mjs",
+      "sha256": "b35ff7269e1ec816e67be7ad6d4c051a9781c1f05053b8b9d626bc1aa6479122",
+      "mode": "0644",
+      "size": 1063,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/lifecycle.mjs",
+      "sha256": "d291ae9db7d78a235076883507c795cba796cb37d5043a5b08e9268c2b7288cb",
+      "mode": "0644",
+      "size": 7271,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/linux.mjs",
+      "sha256": "f9b819e79e40f8cda65050676e4e8865c003e7e62afbfce20bc76c98cab522b0",
+      "mode": "0755",
+      "size": 40380,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/managed-codex-login.mjs",
+      "sha256": "5cdb52205ff2124434b4c252dfefa0c8bda523de6c9f6b08536763552853889b",
+      "mode": "0644",
+      "size": 5302,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/materialize-bootstrap.mjs",
+      "sha256": "69d93734b4d65e59144af94ba2d088f04d2d84b624c7c9dc56d69a64e1580921",
+      "mode": "0644",
+      "size": 5192,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/release-preflight.mjs",
+      "sha256": "27252cc5b9399a9b8124cedf3bd9e3c58a25fb930e5c412fea0530bd44f53879",
+      "mode": "0644",
+      "size": 1701,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/resolve-codex.mjs",
+      "sha256": "dba433c80876c67648babdb0684c68e3c2e48e7cce222e97c1389077b60dc982",
+      "mode": "0644",
+      "size": 577,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/runtime-install-state.mjs",
+      "sha256": "ba348cddd9377f8e18eca6e4ae663e1ef976379b96e898f0e8aab8d69e5d75d9",
+      "mode": "0644",
+      "size": 4880,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/sync-codex-skills.mjs",
+      "sha256": "19ad3742a1a9202368415633cc7cd65e13cdd550c264c9d3b209b66bfa3a7bdf",
+      "mode": "0644",
+      "size": 3810,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/uninstall.ps1",
+      "sha256": "786c5c751193f50fed1e78242c0f5db39e44aebca737c14eb26f9934a78996fe",
+      "mode": "0644",
+      "size": 2234,
+      "manifested": true
+    },
+    {
+      "path": "package/scripts/uninstall.sh",
+      "sha256": "452fe015b0ff9cb14859fa5ec2a69a888eb08abb2cc479d36b4f6701775467fb",
+      "mode": "0644",
+      "size": 3504,
+      "manifested": true
+    },
+    {
+      "path": "package/skills/codexless-browser-repair/SKILL.md",
+      "sha256": "43b24574da21f09ee625e56b56ff753a03f6d35043c1fb3203ae47f43097f647",
+      "mode": "0644",
+      "size": 8745,
+      "manifested": true
+    },
+    {
+      "path": "package/src/agent-card-ui.mjs",
+      "sha256": "7c746482191e781afe6fc2dcb7a9ce41b322007fce4ac2a5d4703a21feca5c91",
+      "mode": "0644",
+      "size": 28857,
+      "manifested": true
+    },
+    {
+      "path": "package/src/agent-resource.mjs",
+      "sha256": "585528b34d8a3f4b4e4d1e797724628972cb1e9d2d843766a12401c4c2f23382",
+      "mode": "0644",
+      "size": 3962,
+      "manifested": true
+    },
+    {
+      "path": "package/src/agent-tools.mjs",
+      "sha256": "d735d25381beabd22fb5c814ba88c62628fce5bc3adb8bc1c4be9329a2897471",
+      "mode": "0644",
+      "size": 134676,
+      "manifested": true
+    },
+    {
+      "path": "package/src/bootstrap-archive.mjs",
+      "sha256": "8ad353e63399126b4a9c766194ee360a767c7d9e2158d19f024b96e64d5e5f3f",
+      "mode": "0644",
+      "size": 15606,
+      "manifested": true
+    },
+    {
+      "path": "package/src/bootstrap-persistence.mjs",
+      "sha256": "5641812542306bfb48d0503721fc9d586ae987fcc23c4c4e4032d7543a2d68a5",
+      "mode": "0644",
+      "size": 12249,
+      "manifested": true
+    },
+    {
+      "path": "package/src/bootstrap-updater.mjs",
+      "sha256": "8fc1d19dfebcb956aa8b9887190830efc13141253ae407cb14b8629ffc428c3f",
+      "mode": "0644",
+      "size": 17905,
+      "manifested": true
+    },
+    {
+      "path": "package/src/browser-element-ref.mjs",
+      "sha256": "6d33904dd35acc0b483b79cbf992405c2f7db660e9dced8d81498971c2353b4a",
+      "mode": "0644",
+      "size": 7528,
+      "manifested": true
+    },
+    {
+      "path": "package/src/browser-elicitation-bridge.mjs",
+      "sha256": "2cc060b019fe38b9a990876992365aa0c32e94ac4b190c98bd61b5da04b4fee2",
+      "mode": "0644",
+      "size": 28763,
+      "manifested": true
+    },
+    {
+      "path": "package/src/browser-model-route-probe.mjs",
+      "sha256": "2b0cc93ad064543b09a276cb2be8d031b926cc62c6cfe11bd916a8e2a592f07b",
+      "mode": "0644",
+      "size": 15958,
+      "manifested": true
+    },
+    {
+      "path": "package/src/browser-runtime-compat.mjs",
+      "sha256": "97dc1da61d45a7a8b5d4f9e5ed9ae82ba981c01c99e41a038957b3e85631e77a",
+      "mode": "0644",
+      "size": 7607,
+      "manifested": true
+    },
+    {
+      "path": "package/src/browser-tools.mjs",
+      "sha256": "5db635f7f1057da69b8192e83fe1bc18083ded2e8e385dcf9dfe3f0af72b46a3",
+      "mode": "0644",
+      "size": 62268,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-agent-executor.mjs",
+      "sha256": "e41d85f8c194bd0d9439d9a033f63e60a4a6ae6bcd8a28a2b6fe0e44bd66b2c8",
+      "mode": "0644",
+      "size": 60860,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-app-server-client.mjs",
+      "sha256": "f15709bc04bb808c371021ae3ce13b7688eb58c555fea5acd511ba99e86034f5",
+      "mode": "0644",
+      "size": 17453,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-authority-executor.mjs",
+      "sha256": "c9f8fe3b99e809da1db3d3d8ea023f7e1e904e1da931c2d0f30fcc1ea46801fd",
+      "mode": "0644",
+      "size": 33902,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-bin.mjs",
+      "sha256": "447630ebbb8f7c3f86e023d641f593204e012c58608733d85a252ee9fbba89ed",
+      "mode": "0644",
+      "size": 13193,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-browser-executor.mjs",
+      "sha256": "70d4e35036505012a5fee9250f3b50281bd4998a9e9eaa8e4aea775817b6ff71",
+      "mode": "0644",
+      "size": 322160,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-call-profile.mjs",
+      "sha256": "60c10798d60e9ed5c479edea9ff290917004d94c84fd73a50c7e7f22a1ea335a",
+      "mode": "0644",
+      "size": 21209,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-computer-use-executor.mjs",
+      "sha256": "caf6acbae38396f46a47f13abc282117c5f5f296bece15aff56d009120256489",
+      "mode": "0644",
+      "size": 29784,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-model-catalog.mjs",
+      "sha256": "17a6aaad0f05b7c7260616c40beb75d07eade1981f5396d8db660490a085c7de",
+      "mode": "0644",
+      "size": 1548,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-permission-executor.mjs",
+      "sha256": "b1542dbb7a64009e6a154b8a56663cf5cf0b4e4fdedffc68135c152971d34cc5",
+      "mode": "0644",
+      "size": 15327,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-preview-account-preflight.mjs",
+      "sha256": "c8b7c8b5821a8caac69db40e5df460c18f89ab0e72f7fe03d377567c12a468d2",
+      "mode": "0644",
+      "size": 5526,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-quota-snapshot.mjs",
+      "sha256": "c061d6ad37f86f1a16d6409b5fa38b37c9f00d6ab52fa3834ecf5c3298905585",
+      "mode": "0644",
+      "size": 3802,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-runtime-provider.mjs",
+      "sha256": "9257b11cc1f1d465501f525f75cb57dc1640d4370906e9906ec8d063c5fd5f45",
+      "mode": "0644",
+      "size": 9940,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-skill-sync.mjs",
+      "sha256": "7b0859baaca0271fec30d6c3adb69d0b40f727dfadd70abda31b032e2e2b394a",
+      "mode": "0644",
+      "size": 18373,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codex-workbench-executor.mjs",
+      "sha256": "1ee037bc407024361e95704c35a8d422cb57e9d3db146893661ddff385e9bd30",
+      "mode": "0644",
+      "size": 29367,
+      "manifested": true
+    },
+    {
+      "path": "package/src/codexless-runtime.mjs",
+      "sha256": "0635aa12a49744f569d10eaf0702994a13e8379fc03e114e4d4cb331601ab569",
+      "mode": "0644",
+      "size": 41727,
+      "manifested": true
+    },
+    {
+      "path": "package/src/construction-tools.mjs",
+      "sha256": "40b78c253ff543ae9bc2f7ac0319fd363a57efcf637da6bf498bdee85d0f7cfe",
+      "mode": "0644",
+      "size": 19218,
+      "manifested": true
+    },
+    {
+      "path": "package/src/deferred-browser-adapter.mjs",
+      "sha256": "4d5b70d9fa2fbb4e2c8132455c3acda17969ac800476d88a78e16588f8b59a11",
+      "mode": "0644",
+      "size": 1701,
+      "manifested": true
+    },
+    {
+      "path": "package/src/doctor-health.mjs",
+      "sha256": "08b0ae3dde0bd48eba4b846db174bd7fc44b15b23395db87e6fc5d658e4d4a26",
+      "mode": "0644",
+      "size": 2605,
+      "manifested": true
+    },
+    {
+      "path": "package/src/excel-tools.mjs",
+      "sha256": "33e218e3ce0c2ed431438788689ee61cdf10d054f39b5ec26f5a13aa4e42f4f6",
+      "mode": "0644",
+      "size": 39808,
+      "manifested": true
+    },
+    {
+      "path": "package/src/json-file.mjs",
+      "sha256": "0cd2ae6acc150ace398169c23c291b28591b5789abdcd524e7785f8808bc918c",
+      "mode": "0644",
+      "size": 570,
+      "manifested": true
+    },
+    {
+      "path": "package/src/lazy-codex-agent-executor.mjs",
+      "sha256": "5cb2a1c2de177250087862b6e96bb0c5bda036b83c0787873c0858bcd92fe517",
+      "mode": "0644",
+      "size": 2081,
+      "manifested": true
+    },
+    {
+      "path": "package/src/lazy-codex-authority-executor.mjs",
+      "sha256": "5bb5713f0cae761b6baad7544fe166890f0dae6101ab331b8412d75cf7ada676",
+      "mode": "0644",
+      "size": 977,
+      "manifested": true
+    },
+    {
+      "path": "package/src/lifecycle-contract.mjs",
+      "sha256": "dc5b8a48717db77f2d7c7588d1853926c1a85c08e337bba13ef6831ef1fae705",
+      "mode": "0644",
+      "size": 35797,
+      "manifested": true
+    },
+    {
+      "path": "package/src/linux-construction-adapter.mjs",
+      "sha256": "5870aedba80d0f01a28bb956e9e765bfd9a68cfc18e5e4dc96a5f202c6b9a6de",
+      "mode": "0644",
+      "size": 5640,
+      "manifested": true
+    },
+    {
+      "path": "package/src/linux-identity.mjs",
+      "sha256": "c68e9a45d6550e8adb52b1691e5d9429dd3eb634d6d128af34cd18aa349b622f",
+      "mode": "0644",
+      "size": 1754,
+      "manifested": true
+    },
+    {
+      "path": "package/src/managed-runtime-readiness.mjs",
+      "sha256": "ffa03af90c9939ba21daa59c33bc81c02778bd92696dfbaf5bed6216d10f4875",
+      "mode": "0644",
+      "size": 5587,
+      "manifested": true
+    },
+    {
+      "path": "package/src/mcp-http-public.mjs",
+      "sha256": "9174535a2690d02e28ddc203b6b02ecf071b5bdd1161aeae9a6d4642c4c04647",
+      "mode": "0644",
+      "size": 4063,
+      "manifested": true
+    },
+    {
+      "path": "package/src/mcp-http-session-router.mjs",
+      "sha256": "d332d5d954b37f9d914b22e8571a16fe235d15189ad98382a7d4a410021d0088",
+      "mode": "0644",
+      "size": 4762,
+      "manifested": true
+    },
+    {
+      "path": "package/src/mcp-server-factory.mjs",
+      "sha256": "799e9b2219a4be21d8c57332f8a6084a2805278bbe1d2bbccc63557058c7d6a8",
+      "mode": "0644",
+      "size": 25108,
+      "manifested": true
+    },
+    {
+      "path": "package/src/mcp-status-pagination.mjs",
+      "sha256": "0c7b0482fbd66f399929e245c14da64f96acd747aa98340e811db64aed5c7c8b",
+      "mode": "0644",
+      "size": 1760,
+      "manifested": true
+    },
+    {
+      "path": "package/src/mcp-stdio-public.mjs",
+      "sha256": "7ce8f5afc2931bb3fa33ddcface84ebeaaef4ff3e8441de516432f0a2b48e73c",
+      "mode": "0644",
+      "size": 88,
+      "manifested": true
+    },
+    {
+      "path": "package/src/mcp-stdio-runtime.mjs",
+      "sha256": "bd6b756a3bee7e567802b34e0ec5b491acd66a7a2225ccf8a6e67981f7266eec",
+      "mode": "0644",
+      "size": 1489,
+      "manifested": true
+    },
+    {
+      "path": "package/src/metered-consent.mjs",
+      "sha256": "c6954e60e5f557740b47460aaca86b6a16adde89ae3b11ffff267ba0e8c95e10",
+      "mode": "0644",
+      "size": 4232,
+      "manifested": true
+    },
+    {
+      "path": "package/src/platform-support.mjs",
+      "sha256": "14c34bca3897f933ec30b4bceb8160e4df49b63eea9921d47077a5e3ab81278d",
+      "mode": "0644",
+      "size": 1696,
+      "manifested": true
+    },
+    {
+      "path": "package/src/public-browser-workbench-adapter.mjs",
+      "sha256": "93b601b6aebf25a69bb71aef7ecc43b1c95e6217af1acd84b653eda68aa543c3",
+      "mode": "0644",
+      "size": 2184,
+      "manifested": true
+    },
+    {
+      "path": "package/src/public-command-policy.mjs",
+      "sha256": "8a50e7a2fdf31f144eb215c3f9fcae472cbf90b68d0cc787e108cc52f9ecb6b3",
+      "mode": "0644",
+      "size": 3808,
+      "manifested": true
+    },
+    {
+      "path": "package/src/public-context-executor.mjs",
+      "sha256": "7d68a1a2d0222c0003447a62b025d2a4c7e10d6da0e7eeaf743197f65673884f",
+      "mode": "0644",
+      "size": 11150,
+      "manifested": true
+    },
+    {
+      "path": "package/src/public-context-tools.mjs",
+      "sha256": "c6e11ea11e896bc25e1cd9d9195b3608740fe9b5d7a3a7fd064a4721e32d45fe",
+      "mode": "0644",
+      "size": 3546,
+      "manifested": true
+    },
+    {
+      "path": "package/src/public-runtime.mjs",
+      "sha256": "e2a005999a144c650804e3c3422ce75c5b79af28cfea244ec5045f47e2e3136e",
+      "mode": "0644",
+      "size": 8795,
+      "manifested": true
+    },
+    {
+      "path": "package/src/public-server-factory.mjs",
+      "sha256": "a00e16fb780013c0c94e32810860e1c9062556662a192265b38268e00d076f05",
+      "mode": "0644",
+      "size": 10249,
+      "manifested": true
+    },
+    {
+      "path": "package/src/public-tools.mjs",
+      "sha256": "a9d78721695df8aec8f5f61c8306c209a4ab5e89cb0694d6b78a4a90206f7db7",
+      "mode": "0644",
+      "size": 1643,
+      "manifested": true
+    },
+    {
+      "path": "package/src/recent-call-diagnostics.mjs",
+      "sha256": "6b993859cb1b149da13356032a6e7816921cbd641fa9b6504b5fc2b4c851e664",
+      "mode": "0644",
+      "size": 15278,
+      "manifested": true
+    },
+    {
+      "path": "package/src/recent-call-http.mjs",
+      "sha256": "3c31b6cbf51b82274191e5577f04c2e5e84680dd431ed1e7e00f0d42c8197fce",
+      "mode": "0644",
+      "size": 2383,
+      "manifested": true
+    },
+    {
+      "path": "package/src/recent-call-receipts.mjs",
+      "sha256": "947bf86f6119ef554605697f4815ab7246112d5a1c07f63d2dc3a891217ced89",
+      "mode": "0644",
+      "size": 7519,
+      "manifested": true
+    },
+    {
+      "path": "package/src/release-discovery.mjs",
+      "sha256": "927f450fe6a8c0f0697bd38883aaf7bb4c241d4c0be97ce9b3a72f9732ccdf7c",
+      "mode": "0644",
+      "size": 28908,
+      "manifested": true
+    },
+    {
+      "path": "package/src/release-identity.mjs",
+      "sha256": "13971f894f9a2c8c16223bab8a04ac3fb3f10cb09771962ec6ca8504a894fce3",
+      "mode": "0644",
+      "size": 13886,
+      "manifested": true
+    },
+    {
+      "path": "package/src/runtime-routing-policy.mjs",
+      "sha256": "b82183268cdabd5eaf5ab8965b1ef078328573e19347041e6adc2339d3cabbfd",
+      "mode": "0644",
+      "size": 14998,
+      "manifested": true
+    },
+    {
+      "path": "package/src/stock-prompt-input-skill-routing.mjs",
+      "sha256": "2138134019ade3e4596d2cd156db2813b23250b0f91193e6e9e2944420e61768",
+      "mode": "0644",
+      "size": 18884,
+      "manifested": true
+    },
+    {
+      "path": "package/src/surface-contracts.mjs",
+      "sha256": "8b1025def9370d9133494c01375764b358283409bea530895512cdd30fee54cf",
+      "mode": "0644",
+      "size": 4798,
+      "manifested": true
+    },
+    {
+      "path": "package/src/toolbox-method-registry.mjs",
+      "sha256": "3ee4e246c1ece6ef52468f9122776d6278e56066408dc8d419707f531e12f4c5",
+      "mode": "0644",
+      "size": 1220,
+      "manifested": true
+    },
+    {
+      "path": "package/src/upstream-compatibility-fingerprint.mjs",
+      "sha256": "965b8f742078f3c09064139fd8487979dee34cf1202ab6cf2f9d05b60ddf72ed",
+      "mode": "0644",
+      "size": 46685,
+      "manifested": true
+    },
+    {
+      "path": "package/src/workbench-tools.mjs",
+      "sha256": "24053f55009ab165958ce5cdb48887e556d80829f391f8a35e0980c73eb0a72d",
+      "mode": "0644",
+      "size": 11863,
+      "manifested": true
+    }
+  ]
+}

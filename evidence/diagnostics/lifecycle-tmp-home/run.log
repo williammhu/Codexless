@@ -1,0 +1,73 @@
+
+[initial install with npm ci --omit=dev]
+{
+  "ok": true,
+  "action": "installed",
+  "applicationId": "codexless-linux",
+  "paths": {
+    "home": "$TEST_HOME",
+    "data": "$TEST_HOME/xdg-data/codexless-linux",
+    "config": "$TEST_HOME/xdg-config/codexless-linux",
+    "state": "$TEST_HOME/xdg-state/codexless-linux",
+    "app": "$TEST_HOME/xdg-data/codexless-linux/app",
+    "runtime": "$TEST_HOME/xdg-data/codexless-linux/runtime",
+    "bin": "$TEST_HOME/.local/bin",
+    "runtimeConfig": "$TEST_HOME/xdg-config/codexless-linux/runtime.json",
+    "ownership": "$TEST_HOME/xdg-state/codexless-linux/installation.json",
+    "codexHome": "$TEST_HOME/xdg-state/codexless-linux/codex-home",
+    "unit": "$TEST_HOME/xdg-config/systemd/user/codexless-linux.service",
+    "log": "$TEST_HOME/xdg-state/codexless-linux/logs/server.log"
+  },
+  "version": "0.1.2-preview.1",
+  "previousBackup": null,
+  "projectTrust": "create_trusted",
+  "serviceStarted": false,
+  "autostartEnabled": false,
+  "next": "codexless-linux-doctor"
+}
+
+
+[doctor]
+{
+  "ok": true,
+  "applicationId": "codexless-linux",
+  "paths": {
+    "home": "$TEST_HOME",
+    "data": "$TEST_HOME/xdg-data/codexless-linux",
+    "config": "$TEST_HOME/xdg-config/codexless-linux",
+    "state": "$TEST_HOME/xdg-state/codexless-linux",
+    "app": "$TEST_HOME/xdg-data/codexless-linux/app",
+    "runtime": "$TEST_HOME/xdg-data/codexless-linux/runtime",
+    "bin": "$TEST_HOME/.local/bin",
+    "runtimeConfig": "$TEST_HOME/xdg-config/codexless-linux/runtime.json",
+    "ownership": "$TEST_HOME/xdg-state/codexless-linux/installation.json",
+    "codexHome": "$TEST_HOME/xdg-state/codexless-linux/codex-home",
+    "unit": "$TEST_HOME/xdg-config/systemd/user/codexless-linux.service",
+    "log": "$TEST_HOME/xdg-state/codexless-linux/logs/server.log"
+  },
+  "checks": [
+    {
+      "name": "linux",
+      "ok": true,
+      "detail": "linux/x64"
+    },
+    {
+      "name": "node",
+      "ok": true,
+      "detail": "v22.23.3"
+    },
+    {
+      "name": "installation",
+      "ok": true,
+      "detail": "0.1.2-preview.1"
+    }
+  ],
+  "upstream": null,
+  "health": {
+    "status": "not_running"
+  },
+  "chatgptEndToEnd": "not_verified"
+}
+
+[codex-app-server] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("$TEST_HOME/xdg-state/codexless-linux/codex-home"))
+{"ok":false,"applicationId":"codexless-linux","error":"Codex compatibility gate failed: model-free command/exec read-only probe did not return the expected marker (exit=1)"}

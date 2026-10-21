@@ -1,0 +1,124 @@
+{
+  "sourceTree": "3f44470de142222788f8f6e22e7926684062ad97",
+  "platform": "linux",
+  "architecture": "x64",
+  "nodeVersion": "v22.23.3",
+  "codexVersion": "codex-cli 0.163.0",
+  "launchArgv": [
+    "<NODE22>",
+    "<SOURCE>/scripts/launch.mjs",
+    "stdio"
+  ],
+  "isolation": {
+    "codexHome": "<FIXTURE>/codex-home",
+    "home": "<FIXTURE>/home",
+    "sandbox_mode": "workspace-write",
+    "approval_policy": "on-request",
+    "trustedProject": "<FIXTURE>/trusted project",
+    "fixtureOutsideTmp": true,
+    "sourceUnchanged": true
+  },
+  "checks": [
+    {
+      "check": "actual stdio MCP initialize and 45-tool discovery",
+      "status": "pass"
+    },
+    {
+      "check": "legacy workspace/on-request inherit resolves actual :workspace",
+      "status": "pass",
+      "exitCode": 0,
+      "permissionProfile": ":workspace",
+      "permissionCeiling": ":workspace"
+    },
+    {
+      "check": "explicit readOnly downscopes official profile",
+      "status": "pass",
+      "exitCode": 0,
+      "permissionProfile": ":read-only"
+    },
+    {
+      "check": "inherit write in trusted workspace succeeds",
+      "status": "pass",
+      "exitCode": 0
+    },
+    {
+      "check": "inherit write to sibling outside workspace denied with no mutation",
+      "status": "pass",
+      "exitCode": 1,
+      "permissionProfile": ":workspace",
+      "stderr": "node:fs:2430\n    return binding.writeFileUtf8(\n                   ^\n\nError: EROFS: read-only file system, open '<FIXTURE>/outside-write-rejected.txt'\n    at Object.writeFileSync (node:fs:2430:20)\n    at [eval]:1:20\n    at runScriptInThisContext (node:internal/vm:209:10)\n    at node:internal/process/execution:446:12\n    at [eval]-wrapper:6:24\n    at runScriptInContext (node:internal/process/execution:444:60)\n    at evalFunction (node:internal/process/execution:279:30)\n    at evalTypeScript (node:internal/process/execution:291:3)\n    at node:internal/main/eval_string:74:3 {\n  errno: -30,\n  code: 'EROFS',\n  syscall: 'open',\n  path: '<FIXTURE>/outside-write-rejected.txt'\n}\n\nNode.js v22.23.3\n"
+    },
+    {
+      "check": "readOnly write inside workspace denied with no mutation",
+      "status": "pass",
+      "exitCode": 1,
+      "permissionProfile": ":read-only",
+      "stderr": "node:fs:2430\n    return binding.writeFileUtf8(\n                   ^\n\nError: EROFS: read-only file system, open 'readonly-denied.txt'\n    at Object.writeFileSync (node:fs:2430:20)\n    at [eval]:1:20\n    at runScriptInThisContext (node:internal/vm:209:10)\n    at node:internal/process/execution:446:12\n    at [eval]-wrapper:6:24\n    at runScriptInContext (node:internal/process/execution:444:60)\n    at evalFunction (node:internal/process/execution:279:30)\n    at evalTypeScript (node:internal/process/execution:291:3)\n    at node:internal/main/eval_string:74:3 {\n  errno: -30,\n  code: 'EROFS',\n  syscall: 'open',\n  path: 'readonly-denied.txt'\n}\n\nNode.js v22.23.3\n"
+    },
+    {
+      "check": "inherit request from untrusted sibling cwd rejected",
+      "status": "pass",
+      "error": "{\"error\":\"Codex has no explicitly trusted project/root covering cwd <FIXTURE>/untrusted-sibling; Codexless will not create trust as a side effect of permission resolution.\",\"errorCode\":\"PERMISSION_APPROVAL_REQUIRED\",\"nextActions\":[\"Explicitly trust/authorize the target path in Codex or local Codexless policy, then retry.\",\"Use a cwd already covered by an explicitly trusted Codex project/root.\"]}"
+    },
+    {
+      "check": "remote permissionProfile override rejected by public schema",
+      "status": "pass",
+      "attemptedValue": ":danger-full-access",
+      "error": "{\"message\":\"Input validation error: Invalid arguments for tool codex.command_exec: Unrecognized key: \\\"permissionProfile\\\"\"}"
+    },
+    {
+      "check": "remote permissions override rejected by public schema",
+      "status": "pass",
+      "attemptedValue": ":danger-full-access",
+      "error": "{\"message\":\"Input validation error: Invalid arguments for tool codex.command_exec: Unrecognized key: \\\"permissions\\\"\"}"
+    },
+    {
+      "check": "remote sandbox_mode override rejected by public schema",
+      "status": "pass",
+      "attemptedValue": "danger-full-access",
+      "error": "{\"message\":\"Input validation error: Invalid arguments for tool codex.command_exec: Unrecognized key: \\\"sandbox_mode\\\"\"}"
+    },
+    {
+      "check": "remote approval_policy override rejected by public schema",
+      "status": "pass",
+      "attemptedValue": "never",
+      "error": "{\"message\":\"Input validation error: Invalid arguments for tool codex.command_exec: Unrecognized key: \\\"approval_policy\\\"\"}"
+    },
+    {
+      "check": "remote trust_level override rejected by public schema",
+      "status": "pass",
+      "attemptedValue": "trusted",
+      "error": "{\"message\":\"Input validation error: Invalid arguments for tool codex.command_exec: Unrecognized key: \\\"trust_level\\\"\"}"
+    },
+    {
+      "check": "read_many absolute outside-root path rejected",
+      "status": "pass",
+      "error": "{\"error\":\"authorized construction tool refused path outside trusted root: <FIXTURE>/outside-project.txt\"}"
+    },
+    {
+      "check": "read_many symlink escape rejected",
+      "status": "pass",
+      "error": "{\"error\":\"authorized construction tool refused path outside trusted root: <FIXTURE>/outside-project.txt\"}"
+    },
+    {
+      "check": "precise_edit symlink escape rejected and sibling unchanged",
+      "status": "pass",
+      "error": "{\"error\":\"authorized construction tool refused path outside trusted root: <FIXTURE>/outside-project.txt\"}"
+    },
+    {
+      "check": "metered prepare, duplicate suppression and decline without model turn",
+      "status": "pass",
+      "preparedStatus": "consent_required",
+      "duplicateTaskIdPreserved": true,
+      "turnId": null,
+      "declinedStatus": "rejected"
+    },
+    {
+      "check": "isolated Codex config unchanged and no credential files created",
+      "status": "pass"
+    }
+  ],
+  "modelTurnStarted": false,
+  "status": "pass",
+  "fixtureRemoved": true
+}

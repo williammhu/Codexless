@@ -1,0 +1,206 @@
+{
+  "status": "passed",
+  "platform": "linux",
+  "arch": "x64",
+  "node": "v22.23.3",
+  "npm": "10.9.9",
+  "codex": "0.163.0",
+  "sourceTreeBefore": "3f44470de142222788f8f6e22e7926684062ad97",
+  "sourceTreeAfter": "3f44470de142222788f8f6e22e7926684062ad97",
+  "manifestSha256": "c5702be0cc2f3631ad0d1c4f54098eda31a86693da55247ebcc6df3684730f23",
+  "checks": [
+    {
+      "check": "real source installed with production dependency set, dedicated Node/npm, private config and exact trust",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "installed lifecycle doctor",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "installed stdio initialize / public tools / actual uname",
+      "status": "pass",
+      "detail": {
+        "serverName": "codexless-linux",
+        "toolCount": 45,
+        "uname": "Linux",
+        "modelTurnStarted": false
+      }
+    },
+    {
+      "check": "installed foreground loopback HTTP health / readiness / MCP / Linux command / clean stop",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "idempotent reinstall preserves runtime configuration and isolated trust",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "same-candidate update produces complete app/runtime/dependency integrity backup",
+      "status": "pass",
+      "detail": {
+        "sameVersion": "0.1.2-preview.1",
+        "downgradeNotTested": true
+      }
+    },
+    {
+      "check": "stdio Linux tool remains functional after verified same-version rollback",
+      "status": "pass",
+      "detail": {
+        "serverName": "codexless-linux",
+        "toolCount": 45,
+        "uname": "Linux",
+        "modelTurnStarted": false
+      }
+    },
+    {
+      "check": "verified same-version rollback preserves configuration and state",
+      "status": "pass",
+      "detail": {
+        "historicalReleaseDowngradeNotTested": true
+      }
+    },
+    {
+      "check": "no user service started, enabled or autostart consent created",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "uninstall removes owned application/runtime/wrappers/unit and preserves config/state/backups/fake-original config",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "repeated uninstall is safe",
+      "status": "pass",
+      "detail": true
+    }
+  ],
+  "commands": [
+    {
+      "label": "initial install with npm ci --omit=dev",
+      "executable": "$WORKSPACE/work/node/bin/node",
+      "argv": [
+        "$SOURCE/scripts/linux.mjs",
+        "install",
+        "--source",
+        "$SOURCE",
+        "--node",
+        "$WORKSPACE/work/node/bin/node",
+        "--npm",
+        "$WORKSPACE/work/node/bin/npm",
+        "--codex",
+        "$CODEX",
+        "--cwd",
+        "$PROJECT",
+        "--trust-project",
+        "--port",
+        "44499"
+      ],
+      "exitCode": 0,
+      "elapsedMs": 81212
+    },
+    {
+      "label": "doctor",
+      "executable": "$TEST_HOME/.local/bin/codexless-linux-doctor",
+      "argv": [
+        "--lifecycle-only"
+      ],
+      "exitCode": 0,
+      "elapsedMs": 71
+    },
+    {
+      "label": "install",
+      "executable": "$TEST_HOME/.local/bin/codexless-linux-install",
+      "argv": [
+        "--source",
+        "$SOURCE",
+        "--node",
+        "$WORKSPACE/work/node/bin/node",
+        "--npm",
+        "$WORKSPACE/work/node/bin/npm",
+        "--codex",
+        "$CODEX",
+        "--cwd",
+        "$PROJECT",
+        "--trust-project",
+        "--port",
+        "44499"
+      ],
+      "exitCode": 0,
+      "elapsedMs": 5236
+    },
+    {
+      "label": "update",
+      "executable": "$TEST_HOME/.local/bin/codexless-linux-update",
+      "argv": [
+        "--source",
+        "$SOURCE",
+        "--node",
+        "$WORKSPACE/work/node/bin/node",
+        "--npm",
+        "$WORKSPACE/work/node/bin/npm",
+        "--codex",
+        "$CODEX",
+        "--cwd",
+        "$PROJECT",
+        "--trust-project",
+        "--port",
+        "44499"
+      ],
+      "exitCode": 0,
+      "elapsedMs": 7278
+    },
+    {
+      "label": "rollback",
+      "executable": "$TEST_HOME/.local/bin/codexless-linux-rollback",
+      "argv": [],
+      "exitCode": 0,
+      "elapsedMs": 2702
+    },
+    {
+      "label": "status",
+      "executable": "$TEST_HOME/.local/bin/codexless-linux-status",
+      "argv": [],
+      "exitCode": 0,
+      "elapsedMs": 71
+    },
+    {
+      "label": "uninstall",
+      "executable": "$TEST_HOME/.local/bin/codexless-linux-uninstall",
+      "argv": [],
+      "exitCode": 0,
+      "elapsedMs": 1532
+    },
+    {
+      "label": "idempotent uninstall from reviewed source",
+      "executable": "$WORKSPACE/work/node/bin/node",
+      "argv": [
+        "$SOURCE/scripts/linux.mjs",
+        "uninstall"
+      ],
+      "exitCode": 0,
+      "elapsedMs": 68
+    }
+  ],
+  "failure": null,
+  "boundaries": {
+    "realHomeModified": false,
+    "realCodexConfigRead": false,
+    "credentialsUsed": false,
+    "modelTurnStarted": false,
+    "systemdStartOrEnableCalled": false,
+    "realInstallationTouched": false,
+    "remoteTunnelTested": false,
+    "crossVersionDowngradeTested": false
+  },
+  "notes": [
+    "Install, reinstall, update each used npm ci --omit=dev; no source node_modules copied.",
+    "Rollback switched a complete integrity-validated backup of the same exact candidate version; this does not validate migration between different product releases.",
+    "The optional systemd user unit was generated only inside synthetic HOME; no real user bus was accessible."
+  ]
+}

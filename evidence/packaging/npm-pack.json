@@ -1,0 +1,641 @@
+[
+  {
+    "id": "codexless@0.1.2-preview.1",
+    "name": "codexless",
+    "version": "0.1.2-preview.1",
+    "size": 372485,
+    "unpackedSize": 1644967,
+    "shasum": "1c73876ce342f5ec3eab05ca30917c8df95cd188",
+    "integrity": "sha512-0PwphM5DYm3d0x6Ky0vFTubZeQ2pkUVvC7n2S11Oa0njdYUsgWBGHpXL7wYSN7BnVWk7Tc/Q3bEGFmcxrfIILg==",
+    "filename": "codexless-0.1.2-preview.1.tgz",
+    "files": [
+      {
+        "path": "EXPORT_SYNC.md",
+        "size": 9860,
+        "mode": 420
+      },
+      {
+        "path": "LICENSE",
+        "size": 11357,
+        "mode": 420
+      },
+      {
+        "path": "README.linux.md",
+        "size": 7556,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 14082,
+        "mode": 420
+      },
+      {
+        "path": "README.zh-CN.md",
+        "size": 12115,
+        "mode": 420
+      },
+      {
+        "path": "SECURITY.md",
+        "size": 16542,
+        "mode": 420
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "size": 2770,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-doctor.cmd",
+        "size": 81,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-doctor.sh",
+        "size": 117,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-http.cmd",
+        "size": 83,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-http.sh",
+        "size": 122,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-install.cmd",
+        "size": 129,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-install.sh",
+        "size": 120,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-linux",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-disable",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-doctor",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-enable",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-http",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-install",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-login",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-logs",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-restart",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-rollback",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-start",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-status",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-stdio",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-stop",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-uninstall",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-linux-update",
+        "size": 820,
+        "mode": 493
+      },
+      {
+        "path": "bin/codexless-stdio.cmd",
+        "size": 84,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-stdio.sh",
+        "size": 123,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-uninstall.cmd",
+        "size": 131,
+        "mode": 420
+      },
+      {
+        "path": "bin/codexless-uninstall.sh",
+        "size": 122,
+        "mode": 420
+      },
+      {
+        "path": "config/linux-runtime.example.json",
+        "size": 229,
+        "mode": 420
+      },
+      {
+        "path": "config/release-manifest.json",
+        "size": 15981,
+        "mode": 420
+      },
+      {
+        "path": "config/runtime-install-mode.json",
+        "size": 50,
+        "mode": 420
+      },
+      {
+        "path": "config/runtime-routing-policy.json",
+        "size": 1994,
+        "mode": 420
+      },
+      {
+        "path": "config/skill-lane-policy.json",
+        "size": 428,
+        "mode": 420
+      },
+      {
+        "path": "config/toolbox-method-registry.json",
+        "size": 3144,
+        "mode": 420
+      },
+      {
+        "path": "npm-shrinkwrap.json",
+        "size": 20368,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 4825,
+        "mode": 420
+      },
+      {
+        "path": "scripts/bootstrap-archive.ps1",
+        "size": 3639,
+        "mode": 420
+      },
+      {
+        "path": "scripts/bootstrap-archive.sh",
+        "size": 877,
+        "mode": 420
+      },
+      {
+        "path": "scripts/bootstrap.mjs",
+        "size": 4146,
+        "mode": 420
+      },
+      {
+        "path": "scripts/check-release.mjs",
+        "size": 1626,
+        "mode": 420
+      },
+      {
+        "path": "scripts/compatibility-report.mjs",
+        "size": 125,
+        "mode": 420
+      },
+      {
+        "path": "scripts/doctor.mjs",
+        "size": 21492,
+        "mode": 420
+      },
+      {
+        "path": "scripts/generate-release-manifest.mjs",
+        "size": 2108,
+        "mode": 420
+      },
+      {
+        "path": "scripts/install.ps1",
+        "size": 30700,
+        "mode": 420
+      },
+      {
+        "path": "scripts/install.sh",
+        "size": 33779,
+        "mode": 420
+      },
+      {
+        "path": "scripts/launch.mjs",
+        "size": 1063,
+        "mode": 420
+      },
+      {
+        "path": "scripts/lifecycle.mjs",
+        "size": 7271,
+        "mode": 420
+      },
+      {
+        "path": "scripts/linux.mjs",
+        "size": 40380,
+        "mode": 493
+      },
+      {
+        "path": "scripts/managed-codex-login.mjs",
+        "size": 5302,
+        "mode": 420
+      },
+      {
+        "path": "scripts/materialize-bootstrap.mjs",
+        "size": 5192,
+        "mode": 420
+      },
+      {
+        "path": "scripts/release-preflight.mjs",
+        "size": 1701,
+        "mode": 420
+      },
+      {
+        "path": "scripts/resolve-codex.mjs",
+        "size": 577,
+        "mode": 420
+      },
+      {
+        "path": "scripts/runtime-install-state.mjs",
+        "size": 4880,
+        "mode": 420
+      },
+      {
+        "path": "scripts/sync-codex-skills.mjs",
+        "size": 3810,
+        "mode": 420
+      },
+      {
+        "path": "scripts/uninstall.ps1",
+        "size": 2234,
+        "mode": 420
+      },
+      {
+        "path": "scripts/uninstall.sh",
+        "size": 3504,
+        "mode": 420
+      },
+      {
+        "path": "skills/codexless-browser-repair/SKILL.md",
+        "size": 8745,
+        "mode": 420
+      },
+      {
+        "path": "src/agent-card-ui.mjs",
+        "size": 28857,
+        "mode": 420
+      },
+      {
+        "path": "src/agent-resource.mjs",
+        "size": 3962,
+        "mode": 420
+      },
+      {
+        "path": "src/agent-tools.mjs",
+        "size": 134676,
+        "mode": 420
+      },
+      {
+        "path": "src/bootstrap-archive.mjs",
+        "size": 15606,
+        "mode": 420
+      },
+      {
+        "path": "src/bootstrap-persistence.mjs",
+        "size": 12249,
+        "mode": 420
+      },
+      {
+        "path": "src/bootstrap-updater.mjs",
+        "size": 17905,
+        "mode": 420
+      },
+      {
+        "path": "src/browser-element-ref.mjs",
+        "size": 7528,
+        "mode": 420
+      },
+      {
+        "path": "src/browser-elicitation-bridge.mjs",
+        "size": 28763,
+        "mode": 420
+      },
+      {
+        "path": "src/browser-model-route-probe.mjs",
+        "size": 15958,
+        "mode": 420
+      },
+      {
+        "path": "src/browser-runtime-compat.mjs",
+        "size": 7607,
+        "mode": 420
+      },
+      {
+        "path": "src/browser-tools.mjs",
+        "size": 62268,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-agent-executor.mjs",
+        "size": 60860,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-app-server-client.mjs",
+        "size": 17453,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-authority-executor.mjs",
+        "size": 33902,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-bin.mjs",
+        "size": 13193,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-browser-executor.mjs",
+        "size": 322160,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-call-profile.mjs",
+        "size": 21209,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-computer-use-executor.mjs",
+        "size": 29784,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-model-catalog.mjs",
+        "size": 1548,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-permission-executor.mjs",
+        "size": 15327,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-preview-account-preflight.mjs",
+        "size": 5526,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-quota-snapshot.mjs",
+        "size": 3802,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-runtime-provider.mjs",
+        "size": 9940,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-skill-sync.mjs",
+        "size": 18373,
+        "mode": 420
+      },
+      {
+        "path": "src/codex-workbench-executor.mjs",
+        "size": 29367,
+        "mode": 420
+      },
+      {
+        "path": "src/codexless-runtime.mjs",
+        "size": 41727,
+        "mode": 420
+      },
+      {
+        "path": "src/construction-tools.mjs",
+        "size": 19218,
+        "mode": 420
+      },
+      {
+        "path": "src/deferred-browser-adapter.mjs",
+        "size": 1701,
+        "mode": 420
+      },
+      {
+        "path": "src/doctor-health.mjs",
+        "size": 2605,
+        "mode": 420
+      },
+      {
+        "path": "src/excel-tools.mjs",
+        "size": 39808,
+        "mode": 420
+      },
+      {
+        "path": "src/json-file.mjs",
+        "size": 570,
+        "mode": 420
+      },
+      {
+        "path": "src/lazy-codex-agent-executor.mjs",
+        "size": 2081,
+        "mode": 420
+      },
+      {
+        "path": "src/lazy-codex-authority-executor.mjs",
+        "size": 977,
+        "mode": 420
+      },
+      {
+        "path": "src/lifecycle-contract.mjs",
+        "size": 35797,
+        "mode": 420
+      },
+      {
+        "path": "src/linux-construction-adapter.mjs",
+        "size": 5640,
+        "mode": 420
+      },
+      {
+        "path": "src/linux-identity.mjs",
+        "size": 1754,
+        "mode": 420
+      },
+      {
+        "path": "src/managed-runtime-readiness.mjs",
+        "size": 5587,
+        "mode": 420
+      },
+      {
+        "path": "src/mcp-http-public.mjs",
+        "size": 4063,
+        "mode": 420
+      },
+      {
+        "path": "src/mcp-http-session-router.mjs",
+        "size": 4762,
+        "mode": 420
+      },
+      {
+        "path": "src/mcp-server-factory.mjs",
+        "size": 25108,
+        "mode": 420
+      },
+      {
+        "path": "src/mcp-status-pagination.mjs",
+        "size": 1760,
+        "mode": 420
+      },
+      {
+        "path": "src/mcp-stdio-public.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "src/mcp-stdio-runtime.mjs",
+        "size": 1489,
+        "mode": 420
+      },
+      {
+        "path": "src/metered-consent.mjs",
+        "size": 4232,
+        "mode": 420
+      },
+      {
+        "path": "src/platform-support.mjs",
+        "size": 1696,
+        "mode": 420
+      },
+      {
+        "path": "src/public-browser-workbench-adapter.mjs",
+        "size": 2184,
+        "mode": 420
+      },
+      {
+        "path": "src/public-command-policy.mjs",
+        "size": 3808,
+        "mode": 420
+      },
+      {
+        "path": "src/public-context-executor.mjs",
+        "size": 11150,
+        "mode": 420
+      },
+      {
+        "path": "src/public-context-tools.mjs",
+        "size": 3546,
+        "mode": 420
+      },
+      {
+        "path": "src/public-runtime.mjs",
+        "size": 8795,
+        "mode": 420
+      },
+      {
+        "path": "src/public-server-factory.mjs",
+        "size": 10249,
+        "mode": 420
+      },
+      {
+        "path": "src/public-tools.mjs",
+        "size": 1643,
+        "mode": 420
+      },
+      {
+        "path": "src/recent-call-diagnostics.mjs",
+        "size": 15278,
+        "mode": 420
+      },
+      {
+        "path": "src/recent-call-http.mjs",
+        "size": 2383,
+        "mode": 420
+      },
+      {
+        "path": "src/recent-call-receipts.mjs",
+        "size": 7519,
+        "mode": 420
+      },
+      {
+        "path": "src/release-discovery.mjs",
+        "size": 28908,
+        "mode": 420
+      },
+      {
+        "path": "src/release-identity.mjs",
+        "size": 13886,
+        "mode": 420
+      },
+      {
+        "path": "src/runtime-routing-policy.mjs",
+        "size": 14998,
+        "mode": 420
+      },
+      {
+        "path": "src/stock-prompt-input-skill-routing.mjs",
+        "size": 18884,
+        "mode": 420
+      },
+      {
+        "path": "src/surface-contracts.mjs",
+        "size": 4798,
+        "mode": 420
+      },
+      {
+        "path": "src/toolbox-method-registry.mjs",
+        "size": 1220,
+        "mode": 420
+      },
+      {
+        "path": "src/upstream-compatibility-fingerprint.mjs",
+        "size": 46685,
+        "mode": 420
+      },
+      {
+        "path": "src/workbench-tools.mjs",
+        "size": 11863,
+        "mode": 420
+      }
+    ],
+    "entryCount": 125,
+    "bundled": []
+  }
+]

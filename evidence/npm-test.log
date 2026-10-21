@@ -1,0 +1,805 @@
+
+> codexless@0.1.2-preview.1 test
+> node test/release-identity.mjs && node test/lifecycle-contract.mjs && node test/installer-lifecycle-windows.mjs && node test/bootstrap-archive-policy.mjs && node test/bootstrap-persistence.mjs && node test/codex-version-gate.mjs && node test/browser-runtime-compat.mjs && node test/public-runtime-browser-guardrails.mjs && node test/stock-prompt-input-catalog.mjs && node test/recent-call-diagnostics.mjs && node test/recent-call-http.mjs && node test/doctor-health.mjs && node test/metered-consent.mjs && node test/agent-consent-card.mjs && node test/reasoning-effort.mjs && node test/public-command-policy.mjs && node test/public-registration-allowlist.mjs && node test/browser-elicitation-fallback.mjs && node test/public-browser-adapter.mjs && node --test test/browser-household-parity.mjs && node test/public-contract.mjs && npm run test:agent-progress-steer
+
+release identity PASS 0.1.2-preview.1 31dc0d0614200479c14822ea5536ffc4abefa0e52af486e9fad2728d7ded1b3d
+lifecycle contract PASS a9d8b78e1a682b13a4e934d01b86a1fc4e9542f4af0dad8cb0ba3d692bfa2fe5
+installer lifecycle Windows E2E SKIP (not win32)
+bootstrap archive policy PASS
+bootstrap persistence PASS
+{
+  "passed": true,
+  "resolved": {
+    "path": "/usr/lib/chatgpt/resources/codex",
+    "source": "CODEX_CLI_PATH",
+    "version": "0.162.0-alpha.17.2"
+  },
+  "checks": {
+    "dynamicResolution": true,
+    "cliOnlyResolutionWithoutDesktopPrerequisite": true,
+    "explicitCodexBinOverrideWins": true,
+    "contractFirstDefault": true,
+    "readOnlyCommandExecProbe": true,
+    "explicitNarrowAllowlistStillAvailable": true
+  }
+}
+Household Browser runtime compatibility resolver PASS
+Public runtime Browser guardrails PASS
+stock debug prompt-input production consumer contract PASS
+Recent-call durable diagnostics regression PASS
+Recent-call HTTP filter/limit/no-cache regression PASS
+Doctor Browser/core/optional health regression PASS
+metered-consent: ok
+TAP version 13
+# Subtest: fixed-text prepared approval resolves default and explicit model/effort without exposing historical card controls
+ok 1 - fixed-text prepared approval resolves default and explicit model/effort without exposing historical card controls
+  ---
+  duration_ms: 35.964453
+  type: 'test'
+  ...
+# Subtest: neutral agent_commit is exact server-bound for start and send; duplicate exact Task ID never redispatches
+ok 2 - neutral agent_commit is exact server-bound for start and send; duplicate exact Task ID never redispatches
+  ---
+  duration_ms: 11.496171
+  type: 'test'
+  ...
+# Subtest: unknown prepared Task ID fails closed and changed requestId intent never reuses approval
+ok 3 - unknown prepared Task ID fails closed and changed requestId intent never reuses approval
+  ---
+  duration_ms: 3.342284
+  type: 'test'
+  ...
+# Subtest: prepared start conservatively falls back to trusted read-only only for ambiguous inherited authority
+ok 4 - prepared start conservatively falls back to trusted read-only only for ambiguous inherited authority
+  ---
+  duration_ms: 5.011515
+  type: 'test'
+  ...
+# Subtest: terminal failure remains conspicuous and does not invent unavailable resource fields
+ok 5 - terminal failure remains conspicuous and does not invent unavailable resource fields
+  ---
+  duration_ms: 4.841736
+  type: 'test'
+  ...
+# Subtest: reprepare with changed model/effort binds Yes only to the newly displayed Task ID
+ok 6 - reprepare with changed model/effort binds Yes only to the newly displayed Task ID
+  ---
+  duration_ms: 4.631984
+  type: 'test'
+  ...
+# Subtest: prepared approval rejects unsupported effort before consent
+ok 7 - prepared approval rejects unsupported effort before consent
+  ---
+  duration_ms: 2.983696
+  type: 'test'
+  ...
+# Subtest: fixed approval makes unavailable quota explicit instead of allowing omission
+ok 8 - fixed approval makes unavailable quota explicit instead of allowing omission
+  ---
+  duration_ms: 4.496982
+  type: 'test'
+  ...
+# Subtest: fixed approval preserves all authoritative quota windows without locking display format
+ok 9 - fixed approval preserves all authoritative quota windows without locking display format
+  ---
+  duration_ms: 3.835818
+  type: 'test'
+  ...
+# Subtest: neutral agent_decline seals exact prepared Task ID and later Yes cannot revive it
+ok 10 - neutral agent_decline seals exact prepared Task ID and later Yes cannot revive it
+  ---
+  duration_ms: 4.219967
+  type: 'test'
+  ...
+# Subtest: reasoningEffort remains opt-in and historical card/portable tools are absent on normal registration
+ok 11 - reasoningEffort remains opt-in and historical card/portable tools are absent on normal registration
+  ---
+  duration_ms: 4.269963
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 99.285625
+reasoning effort dynamic validation + dispatch PASS
+public command nested-Codex guard PASS
+Public runtime tool-registration allowlist PASS
+BROWSER_ELICITATION_FALLBACK_OK
+Public Browser workbench adapter lifecycle PASS
+TAP version 13
+# Subtest: Browser rich-editor paragraph canonicalizer preserves paragraph semantics without collapsing genuine text differences
+ok 1 - Browser rich-editor paragraph canonicalizer preserves paragraph semantics without collapsing genuine text differences
+  ---
+  duration_ms: 2.012305
+  type: 'test'
+  ...
+# Subtest: Browser rich-editor proof accepts explicit contenteditable attributes even when the DOM property is false
+ok 2 - Browser rich-editor proof accepts explicit contenteditable attributes even when the DOM property is false
+  ---
+  duration_ms: 1.023713
+  type: 'test'
+  ...
+# Subtest: Browser bound rich-editor resolver accepts exactly one visible nested contenteditable and rejects ambiguity
+ok 3 - Browser bound rich-editor resolver accepts exactly one visible nested contenteditable and rejects ambiguity
+  ---
+  duration_ms: 0.256196
+  type: 'test'
+  ...
+# Subtest: Browser fill editable normalization stays inside the semantic target and rejects ambiguous or explicitly non-editable shapes
+ok 4 - Browser fill editable normalization stays inside the semantic target and rejects ambiguous or explicitly non-editable shapes
+  ---
+  duration_ms: 0.975262
+  type: 'test'
+  ...
+# Subtest: Browser API shape legacy explicit-finalize supports repeated existing-tab claim/read/release/reclaim
+ok 5 - Browser API shape legacy explicit-finalize supports repeated existing-tab claim/read/release/reclaim
+  ---
+  duration_ms: 0.436419
+  type: 'test'
+  ...
+# Subtest: Browser API shape finalize-absent turn-cleanup reports turn-boundary release and optional later-turn handoff
+ok 6 - Browser API shape finalize-absent turn-cleanup reports turn-boundary release and optional later-turn handoff
+  ---
+  duration_ms: 0.703267
+  type: 'test'
+  ...
+# Subtest: Browser API shape finalize-absent fresh new-tab uses markDeliverable
+ok 7 - Browser API shape finalize-absent fresh new-tab uses markDeliverable
+  ---
+  duration_ms: 0.177819
+  type: 'test'
+  ...
+# Subtest: Browser executor integrates stock visible-DOM identity behind opaque element refs for click and double-click
+ok 8 - Browser executor integrates stock visible-DOM identity behind opaque element refs for click and double-click
+  ---
+  duration_ms: 8.496772
+  type: 'test'
+  ...
+# Subtest: Browser opaque element execution revalidates fresh node state and never replays an uncertain dispatch
+ok 9 - Browser opaque element execution revalidates fresh node state and never replays an uncertain dispatch
+  ---
+  duration_ms: 6.567229
+  type: 'test'
+  ...
+# Subtest: Browser origin permission diagnosis separates saved deny, network policy, generic permission, transport, and success
+ok 10 - Browser origin permission diagnosis separates saved deny, network policy, generic permission, transport, and success
+  ---
+  duration_ms: 5.972637
+  type: 'test'
+  ...
+# Subtest: Browser finalize-absent existing-tab read reports deferred turn-boundary release and same-turn reclaim stays busy
+ok 11 - Browser finalize-absent existing-tab read reports deferred turn-boundary release and same-turn reclaim stays busy
+  ---
+  duration_ms: 1.206746
+  type: 'test'
+  ...
+# Subtest: Browser existing-tab mutation claim-busy is pre-dispatch diagnostic and is never auto-replayed
+ok 12 - Browser existing-tab mutation claim-busy is pre-dispatch diagnostic and is never auto-replayed
+  ---
+  duration_ms: 1.330223
+  type: 'test'
+  ...
+# Subtest: Browser tool errors surface only bounded permission diagnostics
+ok 13 - Browser tool errors surface only bounded permission diagnostics
+  ---
+  duration_ms: 12.282796
+  type: 'test'
+  ...
+# Subtest: Browser family-aware existing-tab tools expose family-neutral public titles and descriptions
+ok 14 - Browser family-aware existing-tab tools expose family-neutral public titles and descriptions
+  ---
+  duration_ms: 10.969457
+  type: 'test'
+  ...
+# Subtest: Browser opaque element public surface exposes only bounded refs and single-use prepared actions
+ok 15 - Browser opaque element public surface exposes only bounded refs and single-use prepared actions
+  ---
+  duration_ms: 10.701994
+  type: 'test'
+  ...
+# Subtest: Browser prepare-click schema exposes only narrow role/name or exact-text targets
+ok 16 - Browser prepare-click schema exposes only narrow role/name or exact-text targets
+  ---
+  duration_ms: 13.353856
+  type: 'test'
+  ...
+# Subtest: Browser model-route probe is a narrow household diagnostic surface
+ok 17 - Browser model-route probe is a narrow household diagnostic surface
+  ---
+  duration_ms: 12.453513
+  type: 'test'
+  ...
+# Subtest: Browser model-route probe accepts user-selected current and project Web chat surfaces but rejects non-chat pages
+ok 18 - Browser model-route probe accepts user-selected current and project Web chat surfaces but rejects non-chat pages
+  ---
+  duration_ms: 2.679892
+  type: 'test'
+  ...
+# Subtest: Browser model-route probe rejects an Edge-bound tabRef before Chrome-specific dispatch
+ok 19 - Browser model-route probe rejects an Edge-bound tabRef before Chrome-specific dispatch
+  ---
+  duration_ms: 0.546146
+  type: 'test'
+  ...
+# Subtest: Browser model-route probe reports a known ChatGPT login redirect as a prerequisite instead of a generic host failure
+ok 20 - Browser model-route probe reports a known ChatGPT login redirect as a prerequisite instead of a generic host failure
+  ---
+  duration_ms: 0.401457
+  type: 'test'
+  ...
+# Subtest: Browser prepared download schema stays semantic and destination-free
+ok 21 - Browser prepared download schema stays semantic and destination-free
+  ---
+  duration_ms: 6.873924
+  type: 'test'
+  ...
+# Subtest: Browser prepared upload schema binds one file path at prepare time and no path at execute time
+ok 22 - Browser prepared upload schema binds one file path at prepare time and no path at execute time
+  ---
+  duration_ms: 7.75229
+  type: 'test'
+  ...
+# Subtest: Browser close-tab schemas bind only an opaque tabRef at prepare time and only the prepared ref at execution
+ok 23 - Browser close-tab schemas bind only an opaque tabRef at prepare time and only the prepared ref at execution
+  ---
+  duration_ms: 8.420575
+  type: 'test'
+  ...
+# Subtest: Browser emergency reset and exact-set bulk-close schemas stay administrator-bounded
+ok 24 - Browser emergency reset and exact-set bulk-close schemas stay administrator-bounded
+  ---
+  duration_ms: 11.290885
+  type: 'test'
+  ...
+# Subtest: Browser navigation and placeholder-fill schemas stay narrow
+ok 25 - Browser navigation and placeholder-fill schemas stay narrow
+  ---
+  duration_ms: 8.229185
+  type: 'test'
+  ...
+# Subtest: Browser confirmation policy is read dynamically from the current Codex Chrome Skill and returns task-level verbal guidance
+ok 26 - Browser confirmation policy is read dynamically from the current Codex Chrome Skill and returns task-level verbal guidance
+  ---
+  duration_ms: 7.544501
+  type: 'test'
+  ...
+# Subtest: Browser Preview injects nested Codex turn metadata and exposes opaque read-only tab refs
+ok 27 - Browser Preview injects nested Codex turn metadata and exposes opaque read-only tab refs
+  ---
+  duration_ms: 0.665867
+  type: 'test'
+  ...
+# Subtest: Browser tab listing thin-projects the stock Edge family and keeps opaque refs family-bound
+ok 28 - Browser tab listing thin-projects the stock Edge family and keeps opaque refs family-bound
+  ---
+  duration_ms: 1.375623
+  type: 'test'
+  ...
+# Subtest: Browser WebMCP thin projection reuses one stock fetched handle and exposes no registration identity
+ok 29 - Browser WebMCP thin projection reuses one stock fetched handle and exposes no registration identity
+  ---
+  duration_ms: 0.986798
+  type: 'test'
+  ...
+# Subtest: Browser WebMCP fails closed on stale/page drift and makes ambiguous dispatch non-replayable
+ok 30 - Browser WebMCP fails closed on stale/page drift and makes ambiguous dispatch non-replayable
+  ---
+  duration_ms: 11.693632
+  type: 'test'
+  ...
+# Subtest: Browser WebMCP discovery failure explicitly drops any node-side handle that may have been committed before the response failed
+ok 31 - Browser WebMCP discovery failure explicitly drops any node-side handle that may have been committed before the response failed
+  ---
+  duration_ms: 0.588948
+  type: 'test'
+  ...
+# Subtest: Browser WebMCP tool schemas keep upstream registration and execute-time tab identity server-side
+ok 32 - Browser WebMCP tool schemas keep upstream registration and execute-time tab identity server-side
+  ---
+  duration_ms: 7.000103
+  type: 'test'
+  ...
+# Subtest: Browser WebMCP follows the server-bound Edge family and accepts no execute-time family selector
+ok 33 - Browser WebMCP follows the server-bound Edge family and accepts no execute-time family selector
+  ---
+  duration_ms: 0.585623
+  type: 'test'
+  ...
+# Subtest: Browser password snapshot sanitizer redacts password nodes while preserving ordinary textbox/searchbox content and targeting metadata
+ok 34 - Browser password snapshot sanitizer redacts password nodes while preserving ordinary textbox/searchbox content and targeting metadata
+  ---
+  duration_ms: 0.811436
+  type: 'test'
+  ...
+# Subtest: Browser password snapshot sanitizer binds DOM role=password after official snapshots normalize it to generic
+ok 35 - Browser password snapshot sanitizer binds DOM role=password after official snapshots normalize it to generic
+  ---
+  duration_ms: 0.233253
+  type: 'test'
+  ...
+# Subtest: Browser password snapshot sanitizer fails closed instead of redacting unrelated ambiguous textboxes
+ok 36 - Browser password snapshot sanitizer fails closed instead of redacting unrelated ambiguous textboxes
+  ---
+  duration_ms: 0.165016
+  type: 'test'
+  ...
+# Subtest: Browser read and post-scroll readback share the server-side password snapshot sanitizer
+ok 37 - Browser read and post-scroll readback share the server-side password snapshot sanitizer
+  ---
+  duration_ms: 1.094705
+  type: 'test'
+  ...
+# Subtest: Browser backend topology accepts Chrome plus Edge but fails visibly on multiple Chrome backends without inventing a profile selector
+ok 38 - Browser backend topology accepts Chrome plus Edge but fails visibly on multiple Chrome backends without inventing a profile selector
+  ---
+  duration_ms: 0.479785
+  type: 'test'
+  ...
+# Subtest: Browser screenshot captures one existing viewport as bounded MCP-ready JPEG metadata
+ok 39 - Browser screenshot captures one existing viewport as bounded MCP-ready JPEG metadata
+  ---
+  duration_ms: 0.526544
+  type: 'test'
+  ...
+# Subtest: Browser screenshot rejects declared byte-length drift instead of accepting a partial/mismatched image receipt
+ok 40 - Browser screenshot rejects declared byte-length drift instead of accepting a partial/mismatched image receipt
+  ---
+  duration_ms: 0.388414
+  type: 'test'
+  ...
+# Subtest: Browser screenshot tool exposes only viewport tabRef/cwd inputs and projects image content outside structured JSON
+ok 41 - Browser screenshot tool exposes only viewport tabRef/cwd inputs and projects image content outside structured JSON
+  ---
+  duration_ms: 7.991206
+  type: 'test'
+  ...
+# Subtest: Browser Preview reports stale opaque tab refs without leaking provider IDs
+ok 42 - Browser Preview reports stale opaque tab refs without leaking provider IDs
+  ---
+  duration_ms: 4.638041
+  type: 'test'
+  ...
+# Subtest: Browser close-tab prepare is read-only and execute closes exactly the prepared tab, cleans maps, and consumes the ref
+ok 43 - Browser close-tab prepare is read-only and execute closes exactly the prepared tab, cleans maps, and consumes the ref
+  ---
+  duration_ms: 1.791964
+  type: 'test'
+  ...
+# Subtest: Browser close-tab fails closed on unknown/stale refs and URL, provider, or Workbench-generation drift
+ok 44 - Browser close-tab fails closed on unknown/stale refs and URL, provider, or Workbench-generation drift
+  ---
+  duration_ms: 3.400494
+  type: 'test'
+  ...
+# Subtest: Browser close-tab uncertainty is fail-visible, single-use, and never replayed
+ok 45 - Browser close-tab uncertainty is fail-visible, single-use, and never replayed
+  ---
+  duration_ms: 1.584712
+  type: 'test'
+  ...
+# Subtest: Browser emergency reset advances generation, invalidates stale refs, releases simulated stale claims, and never closes Chrome tabs
+ok 46 - Browser emergency reset advances generation, invalidates stale refs, releases simulated stale claims, and never closes Chrome tabs
+  ---
+  duration_ms: 1.070275
+  type: 'test'
+  ...
+# Subtest: Browser emergency reset refuses while this runtime can prove a mutation is in flight
+ok 47 - Browser emergency reset refuses while this runtime can prove a mutation is in flight
+  ---
+  duration_ms: 0.794827
+  type: 'test'
+  ...
+# Subtest: Browser exact-set bulk close closes only prepared tabs and consumes one opaque set ref
+ok 48 - Browser exact-set bulk close closes only prepared tabs and consumes one opaque set ref
+  ---
+  duration_ms: 1.084127
+  type: 'test'
+  ...
+# Subtest: Browser bulk close stops at first drift with a partial receipt and never attempts later tabs
+ok 49 - Browser bulk close stops at first drift with a partial receipt and never attempts later tabs
+  ---
+  duration_ms: 0.622113
+  type: 'test'
+  ...
+# Subtest: Browser bulk close stops on uncertain item, reports only confirmed closes, and never replays the remaining set
+ok 50 - Browser bulk close stops on uncertain item, reports only confirmed closes, and never replays the remaining set
+  ---
+  duration_ms: 0.560967
+  type: 'test'
+  ...
+# Subtest: Browser Operate prepare/open-tab binds explicit Chrome family, creates one exact deliverable tab, and exposes it on the next family list
+ok 51 - Browser Operate prepare/open-tab binds explicit Chrome family, creates one exact deliverable tab, and exposes it on the next family list
+  ---
+  duration_ms: 0.781394
+  type: 'test'
+  ...
+# Subtest: Browser Operate explicit Edge new-tab keeps family server-bound and never replays an uncertain create
+ok 52 - Browser Operate explicit Edge new-tab keeps family server-bound and never replays an uncertain create
+  ---
+  duration_ms: 0.476952
+  type: 'test'
+  ...
+# Subtest: Browser bounded scroll moves one existing tab and returns a fresh DOM snapshot without click/fill/navigation targets
+ok 53 - Browser bounded scroll moves one existing tab and returns a fresh DOM snapshot without click/fill/navigation targets
+  ---
+  duration_ms: 0.740998
+  type: 'test'
+  ...
+# Subtest: Browser confirmed scroll stays successful when only post-scroll readback fails, while true dispatch uncertainty still fails closed
+ok 54 - Browser confirmed scroll stays successful when only post-scroll readback fails, while true dispatch uncertainty still fails closed
+  ---
+  duration_ms: 0.995391
+  type: 'test'
+  ...
+# Subtest: Browser fixed keypress exposes only Enter/Tab/Escape at current focus and returns confirmed readback
+ok 55 - Browser fixed keypress exposes only Enter/Tab/Escape at current focus and returns confirmed readback
+  ---
+  duration_ms: 1.537586
+  type: 'test'
+  ...
+# Subtest: Browser fixed keypress fails closed on dispatch uncertainty and never implies blind replay
+ok 56 - Browser fixed keypress fails closed on dispatch uncertainty and never implies blind replay
+  ---
+  duration_ms: 0.44184
+  type: 'test'
+  ...
+# Subtest: Browser Operate prepare/navigate binds one existing tab and exact http(s) URL
+ok 57 - Browser Operate prepare/navigate binds one existing tab and exact http(s) URL
+  ---
+  duration_ms: 0.455868
+  type: 'test'
+  ...
+# Subtest: Prepared Browser actions recover one transient node_repl discovery before ref consumption and preserve no-replay boundaries
+ok 58 - Prepared Browser actions recover one transient node_repl discovery before ref consumption and preserve no-replay boundaries
+  ---
+  duration_ms: 1.288464
+  type: 'test'
+  ...
+# Subtest: Browser navigation rejects unsafe URLs, page drift, and uncertain dispatch
+ok 59 - Browser navigation rejects unsafe URLs, page drift, and uncertain dispatch
+  ---
+  duration_ms: 2.407218
+  type: 'test'
+  ...
+# Subtest: Browser Operate prepare/click is exact, one-shot, and read-back verified
+ok 60 - Browser Operate prepare/click is exact, one-shot, and read-back verified
+  ---
+  duration_ms: 0.621178
+  type: 'test'
+  ...
+# Subtest: Browser Operate right-click stays semantic, prepared, and one-shot
+ok 61 - Browser Operate right-click stays semantic, prepared, and one-shot
+  ---
+  duration_ms: 0.58573
+  type: 'test'
+  ...
+# Subtest: Browser scoped role/name click binds a repeated local control to one exact visible link URL
+ok 62 - Browser scoped role/name click binds a repeated local control to one exact visible link URL
+  ---
+  duration_ms: 0.687915
+  type: 'test'
+  ...
+# Subtest: Browser scoped role/name click fails closed when the scope link or local control is ambiguous
+ok 63 - Browser scoped role/name click fails closed when the scope link or local control is ambiguous
+  ---
+  duration_ms: 0.782871
+  type: 'test'
+  ...
+# Subtest: Browser prepared download confirms one exact target and returns the browser-managed path without reading the file
+ok 64 - Browser prepared download confirms one exact target and returns the browser-managed path without reading the file
+  ---
+  duration_ms: 0.788017
+  type: 'test'
+  ...
+# Subtest: Browser prepared download fails closed when dispatch may have happened without a download receipt
+ok 65 - Browser prepared download fails closed when dispatch may have happened without a download receipt
+  ---
+  duration_ms: 0.599044
+  type: 'test'
+  ...
+# Subtest: Browser prepared upload resolves the file through Codex authority before handing it to the chooser
+ok 66 - Browser prepared upload resolves the file through Codex authority before handing it to the chooser
+  ---
+  duration_ms: 27.324189
+  type: 'test'
+  ...
+# Subtest: Browser prepared upload refuses authority escape before any browser mutation
+ok 67 - Browser prepared upload refuses authority escape before any browser mutation
+  ---
+  duration_ms: 1.107936
+  type: 'test'
+  ...
+# Subtest: Browser prepared upload refuses source drift before any browser dispatch
+ok 68 - Browser prepared upload refuses source drift before any browser dispatch
+  ---
+  duration_ms: 13.400373
+  type: 'test'
+  ...
+# Subtest: Browser prepared upload detects source drift after setFiles and does not replay
+ok 69 - Browser prepared upload detects source drift after setFiles and does not replay
+  ---
+  duration_ms: 3.839914
+  type: 'test'
+  ...
+# Subtest: Browser prepared upload fails closed on uncertain filechooser/setFiles dispatch and does not replay
+ok 70 - Browser prepared upload fails closed on uncertain filechooser/setFiles dispatch and does not replay
+  ---
+  duration_ms: 3.025091
+  type: 'test'
+  ...
+# Subtest: Browser Operate exact visible-text fallback handles clickable card text without selectors
+ok 71 - Browser Operate exact visible-text fallback handles clickable card text without selectors
+  ---
+  duration_ms: 3.081204
+  type: 'test'
+  ...
+# Subtest: Browser exact-text binds a unique visible enabled menuitem even when its accessible name is unusable
+ok 72 - Browser exact-text binds a unique visible enabled menuitem even when its accessible name is unusable
+  ---
+  duration_ms: 11.146376
+  type: 'test'
+  ...
+# Subtest: Browser exact-text binds a stable data-thread-id card and rejects binding drift
+ok 73 - Browser exact-text binds a stable data-thread-id card and rejects binding drift
+  ---
+  duration_ms: 1.775487
+  type: 'test'
+  ...
+# Subtest: Browser exact-text binds a unique server-observed stable-id custom anchor and rejects fingerprint drift
+ok 74 - Browser exact-text binds a unique server-observed stable-id custom anchor and rejects fingerprint drift
+  ---
+  duration_ms: 2.249373
+  type: 'test'
+  ...
+# Subtest: Browser stable-id exact-text fallback is click-only and does not widen download or upload targeting
+ok 75 - Browser stable-id exact-text fallback is click-only and does not widen download or upload targeting
+  ---
+  duration_ms: 2.367282
+  type: 'test'
+  ...
+# Subtest: Browser exact-text binds a generic onclick-property card ancestor and rejects binding drift
+ok 76 - Browser exact-text binds a generic onclick-property card ancestor and rejects binding drift
+  ---
+  duration_ms: 1.568014
+  type: 'test'
+  ...
+# Subtest: Browser exact-text binds a label-associated enabled form control and rejects binding drift
+ok 77 - Browser exact-text binds a label-associated enabled form control and rejects binding drift
+  ---
+  duration_ms: 1.475
+  type: 'test'
+  ...
+# Subtest: Browser exact-text binds one local enabled radio and dispatches check instead of a container click
+ok 78 - Browser exact-text binds one local enabled radio and dispatches check instead of a container click
+  ---
+  duration_ms: 1.395468
+  type: 'test'
+  ...
+# Subtest: Browser exact-text binds a server-read old-Reddit flair template option and verifies the hidden template id
+ok 79 - Browser exact-text binds a server-read old-Reddit flair template option and verifies the hidden template id
+  ---
+  duration_ms: 1.276949
+  type: 'test'
+  ...
+# Subtest: Browser Operate fails closed on ambiguous targets, page drift, and uncertain click results
+ok 80 - Browser Operate fails closed on ambiguous targets, page drift, and uncertain click results
+  ---
+  duration_ms: 1.330477
+  type: 'test'
+  ...
+# Subtest: Browser click post-dispatch readback/finalize failures remain uncertain and non-retryable
+ok 81 - Browser click post-dispatch readback/finalize failures remain uncertain and non-retryable
+  ---
+  duration_ms: 0.857129
+  type: 'test'
+  ...
+# Subtest: Browser click transport loss or empty response after dispatch remains uncertain
+ok 82 - Browser click transport loss or empty response after dispatch remains uncertain
+  ---
+  duration_ms: 1.035795
+  type: 'test'
+  ...
+# Subtest: Browser generic MCP isError after a mutation becomes uncertain and cannot replay
+ok 83 - Browser generic MCP isError after a mutation becomes uncertain and cannot replay
+  ---
+  duration_ms: 0.681884
+  type: 'test'
+  ...
+# Subtest: Browser Operate prepare/fill is exact, one-shot, verified, and does not submit
+ok 84 - Browser Operate prepare/fill is exact, one-shot, verified, and does not submit
+  ---
+  duration_ms: 2.698459
+  type: 'test'
+  ...
+# Subtest: Browser fill normalizes a direct textarea and a semantic wrapper with one visible editable descendant
+ok 85 - Browser fill normalizes a direct textarea and a semantic wrapper with one visible editable descendant
+  ---
+  duration_ms: 2.064742
+  type: 'test'
+  ...
+# Subtest: Browser empty fill clears a populated rich editor and prepare reports rendered current value
+ok 86 - Browser empty fill clears a populated rich editor and prepare reports rendered current value
+  ---
+  duration_ms: 1.524998
+  type: 'test'
+  ...
+# Subtest: Browser scoped fill binds one unnamed local textbox to one exact visible link URL
+ok 87 - Browser scoped fill binds one unnamed local textbox to one exact visible link URL
+  ---
+  duration_ms: 1.410535
+  type: 'test'
+  ...
+# Subtest: Browser scoped fill fails closed when the scope link or local editor is ambiguous
+ok 88 - Browser scoped fill fails closed when the scope link or local editor is ambiguous
+  ---
+  duration_ms: 1.094776
+  type: 'test'
+  ...
+# Subtest: Browser fill placeholder fallback stays exact, unique, and role-bounded
+ok 89 - Browser fill placeholder fallback stays exact, unique, and role-bounded
+  ---
+  duration_ms: 1.444235
+  type: 'test'
+  ...
+# Subtest: Browser fill rejects a unique placeholder when it does not satisfy the caller-requested textbox/searchbox role
+ok 90 - Browser fill rejects a unique placeholder when it does not satisfy the caller-requested textbox/searchbox role
+  ---
+  duration_ms: 0.519591
+  type: 'test'
+  ...
+# Subtest: Browser fill supports a unique visible enabled native password input only through textbox exact-placeholder binding
+ok 91 - Browser fill supports a unique visible enabled native password input only through textbox exact-placeholder binding
+  ---
+  duration_ms: 1.644337
+  type: 'test'
+  ...
+# Subtest: Browser password exact-placeholder fill fails closed on ambiguity and hidden or disabled candidates
+ok 92 - Browser password exact-placeholder fill fails closed on ambiguity and hidden or disabled candidates
+  ---
+  duration_ms: 1.097745
+  type: 'test'
+  ...
+# Subtest: Browser password exact-placeholder fill fails closed on placeholder or type drift before execute
+ok 93 - Browser password exact-placeholder fill fails closed on placeholder or type drift before execute
+  ---
+  duration_ms: 2.425655
+  type: 'test'
+  ...
+# Subtest: Browser fill re-resolves a replaced rich editor and performs one guarded repair only when the fresh target is proven empty
+ok 94 - Browser fill re-resolves a replaced rich editor and performs one guarded repair only when the fresh target is proven empty
+  ---
+  duration_ms: 1.372014
+  type: 'test'
+  ...
+# Subtest: Browser fill separates deterministic no-write and verification-unavailable outcomes from true mutation uncertainty
+ok 95 - Browser fill separates deterministic no-write and verification-unavailable outcomes from true mutation uncertainty
+  ---
+  duration_ms: 2.117517
+  type: 'test'
+  ...
+# Subtest: Browser fill fails closed on unsupported roles, page drift, ambiguous targets, and uncertain dispatch
+ok 96 - Browser fill fails closed on unsupported roles, page drift, ambiguous targets, and uncertain dispatch
+  ---
+  duration_ms: 3.799627
+  type: 'test'
+  ...
+# Subtest: Browser fill post-dispatch readback/finalize failures remain uncertain and non-retryable
+ok 97 - Browser fill post-dispatch readback/finalize failures remain uncertain and non-retryable
+  ---
+  duration_ms: 2.335586
+  type: 'test'
+  ...
+# Subtest: Browser fill transport loss or unreadable response after dispatch remains uncertain
+ok 98 - Browser fill transport loss or unreadable response after dispatch remains uncertain
+  ---
+  duration_ms: 2.150644
+  type: 'test'
+  ...
+# Subtest: Browser action refs cannot cross click/fill action kinds
+ok 99 - Browser action refs cannot cross click/fill action kinds
+  ---
+  duration_ms: 1.64397
+  type: 'test'
+  ...
+# Subtest: Browser caller cwd remains discovery context while node_repl uses the dedicated runtime cwd
+ok 100 - Browser caller cwd remains discovery context while node_repl uses the dedicated runtime cwd
+  ---
+  duration_ms: 0.812471
+  type: 'test'
+  ...
+# Subtest: Browser runtime compatibility binding uses the canonical client and rejects cache upgrade drift until main runtime restart
+ok 101 - Browser runtime compatibility binding uses the canonical client and rejects cache upgrade drift until main runtime restart
+  ---
+  duration_ms: 0.978969
+  type: 'test'
+  ...
+# Subtest: Browser refs and prepared mutations fail closed across Workbench generation changes
+ok 102 - Browser refs and prepared mutations fail closed across Workbench generation changes
+  ---
+  duration_ms: 0.840427
+  type: 'test'
+  ...
+# Subtest: Browser Preview diagnoses missing Skill, node_repl, and Chrome backend without CUA fallback
+ok 103 - Browser Preview diagnoses missing Skill, node_repl, and Chrome backend without CUA fallback
+  ---
+  duration_ms: 0.774267
+  type: 'test'
+  ...
+1..103
+# tests 103
+# suites 0
+# pass 103
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 499.039681
+[codexless] [codex-app-server] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/codexless-public-contract-QReuH8/codex-home"))
+[codexless] [codex-app-server] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/codexless-public-contract-QReuH8/codex-home"))
+[codexless] [codex-app-server] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/codexless-public-contract-QReuH8/codex-home"))
+[codexless] Codexless public running; defaultCwd=/tmp/codexless-public-contract-QReuH8/project; profile=codex-resolved; consent=always; cua=off; surface=codexless-public-preview-v1
+Client.listResources() called but server does not advertise resources capability - returning empty list
+[codexless] [codex-app-server] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/codexless-public-contract-QReuH8/codex-home"))
+[codexless] [codex-app-server] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/codexless-public-contract-QReuH8/codex-home"))
+[codexless] [codex-app-server] WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/codexless-public-contract-QReuH8/codex-home"))
+[codexless] [codex-app-server] {"timestamp":"2026-10-20T14:04:15.233520Z","level":"WARN","fields":{"message":"failed to warm featured plugin ids cache","error":"remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex failed with status 401 Unauthorized: {\"detail\":\"Unauthorized\"}"},"target":"codex_core_plugins::manager"}
+
+> codexless@0.1.2-preview.1 test:agent-progress-steer
+> node --test test/agent-progress.mjs test/agent-steer.mjs test/agent-steer-boundaries.mjs
+
+TAP version 13
+# bounded native agent progress PASS
+# Subtest: test/agent-progress.mjs
+ok 1 - test/agent-progress.mjs
+  ---
+  duration_ms: 95.905661
+  type: 'test'
+  ...
+# PASS: concurrent request deduplication, wrong-turn unknown/no replay, pending approval blocks steer
+# PASS: early progress survives turn/start response
+# Subtest: test/agent-steer-boundaries.mjs
+ok 2 - test/agent-steer-boundaries.mjs
+  ---
+  duration_ms: 101.838379
+  type: 'test'
+  ...
+# {
+#   "passed": true,
+#   "checks": {
+#     "acceptedSteerUsesActiveTurn": true,
+#     "confirmedDuplicateDoesNotRedispatch": true,
+#     "requestIdMeaningIsStable": true,
+#     "staleTurnFailsClosed": true,
+#     "explicitRpcRejectIsDistinctAndNoReplay": true,
+#     "uncertainTransportIsNoReplay": true,
+#     "terminalTurnFailsClosed": true,
+#     "correlatedUserMessageProducesOneConsumedReceipt": true,
+#     "minimalStrictSchema": true,
+#     "lazyDelegation": true
+#   }
+# }
+# Subtest: test/agent-steer.mjs
+ok 3 - test/agent-steer.mjs
+  ---
+  duration_ms: 107.439898
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 123.485518
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

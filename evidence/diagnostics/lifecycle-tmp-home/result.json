@@ -1,0 +1,72 @@
+{
+  "status": "failed",
+  "platform": "linux",
+  "arch": "x64",
+  "node": "v22.23.3",
+  "npm": "10.9.9",
+  "codex": "0.163.0",
+  "sourceTreeBefore": "3f44470de142222788f8f6e22e7926684062ad97",
+  "sourceTreeAfter": "3f44470de142222788f8f6e22e7926684062ad97",
+  "manifestSha256": "c5702be0cc2f3631ad0d1c4f54098eda31a86693da55247ebcc6df3684730f23",
+  "checks": [
+    {
+      "check": "real source installed with production dependency set, dedicated Node/npm, private config and exact trust",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "installed lifecycle doctor",
+      "status": "pass",
+      "detail": true
+    }
+  ],
+  "commands": [
+    {
+      "label": "initial install with npm ci --omit=dev",
+      "executable": "$WORKSPACE/work/node/bin/node",
+      "argv": [
+        "$SOURCE/scripts/linux.mjs",
+        "install",
+        "--source",
+        "$SOURCE",
+        "--node",
+        "$WORKSPACE/work/node/bin/node",
+        "--npm",
+        "$WORKSPACE/work/node/bin/npm",
+        "--codex",
+        "$CODEX",
+        "--cwd",
+        "$PROJECT",
+        "--trust-project",
+        "--port",
+        "39599"
+      ],
+      "exitCode": 0,
+      "elapsedMs": 85375
+    },
+    {
+      "label": "doctor",
+      "executable": "$TEST_HOME/.local/bin/codexless-linux-doctor",
+      "argv": [
+        "--lifecycle-only"
+      ],
+      "exitCode": 0,
+      "elapsedMs": 65
+    }
+  ],
+  "failure": "SdkError: Connection closed\n    at Client._onclose ($WORKSPACE/outputs/Codexless-local/node_modules/@modelcontextprotocol/client/dist/src-NAgB4Mp8.cjs:5781:17)\n    at Client._onclose ($WORKSPACE/outputs/Codexless-local/node_modules/@modelcontextprotocol/client/dist/index.cjs:4059:9)\n    at _transport.onclose ($WORKSPACE/outputs/Codexless-local/node_modules/@modelcontextprotocol/client/dist/src-NAgB4Mp8.cjs:5748:10)\n    at ChildProcess.<anonymous> ($WORKSPACE/outputs/Codexless-local/node_modules/@modelcontextprotocol/client/dist/stdio.cjs:94:19)\n    at ChildProcess.emit (node:events:519:28)\n    at maybeClose (node:internal/child_process:1101:16)\n    at ChildProcess._handle.onexit (node:internal/child_process:304:5)",
+  "boundaries": {
+    "realHomeModified": false,
+    "realCodexConfigRead": false,
+    "credentialsUsed": false,
+    "modelTurnStarted": false,
+    "systemdStartOrEnableCalled": false,
+    "realInstallationTouched": false,
+    "remoteTunnelTested": false,
+    "crossVersionDowngradeTested": false
+  },
+  "notes": [
+    "Only initial install and lifecycle doctor completed. Later MCP/lifecycle steps were not executed in this attempt.",
+    "Official Codex refused sandbox helper alias creation beneath /tmp. The final successful attempt moved the synthetic HOME/CODEX_HOME outside /tmp without changing candidate source or permissions."
+  ]
+}

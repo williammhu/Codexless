@@ -1,0 +1,187 @@
+
+[initial install with npm ci --omit=dev]
+{
+  "ok": true,
+  "action": "installed",
+  "applicationId": "codexless-linux",
+  "paths": {
+    "home": "$TEST_HOME",
+    "data": "$TEST_HOME/xdg-data/codexless-linux",
+    "config": "$TEST_HOME/xdg-config/codexless-linux",
+    "state": "$TEST_HOME/xdg-state/codexless-linux",
+    "app": "$TEST_HOME/xdg-data/codexless-linux/app",
+    "runtime": "$TEST_HOME/xdg-data/codexless-linux/runtime",
+    "bin": "$TEST_HOME/.local/bin",
+    "runtimeConfig": "$TEST_HOME/xdg-config/codexless-linux/runtime.json",
+    "ownership": "$TEST_HOME/xdg-state/codexless-linux/installation.json",
+    "codexHome": "$TEST_HOME/xdg-state/codexless-linux/codex-home",
+    "unit": "$TEST_HOME/xdg-config/systemd/user/codexless-linux.service",
+    "log": "$TEST_HOME/xdg-state/codexless-linux/logs/server.log"
+  },
+  "version": "0.1.2-preview.1",
+  "previousBackup": null,
+  "projectTrust": "create_trusted",
+  "serviceStarted": false,
+  "autostartEnabled": false,
+  "next": "codexless-linux-doctor"
+}
+
+
+[doctor]
+{
+  "ok": true,
+  "applicationId": "codexless-linux",
+  "paths": {
+    "home": "$TEST_HOME",
+    "data": "$TEST_HOME/xdg-data/codexless-linux",
+    "config": "$TEST_HOME/xdg-config/codexless-linux",
+    "state": "$TEST_HOME/xdg-state/codexless-linux",
+    "app": "$TEST_HOME/xdg-data/codexless-linux/app",
+    "runtime": "$TEST_HOME/xdg-data/codexless-linux/runtime",
+    "bin": "$TEST_HOME/.local/bin",
+    "runtimeConfig": "$TEST_HOME/xdg-config/codexless-linux/runtime.json",
+    "ownership": "$TEST_HOME/xdg-state/codexless-linux/installation.json",
+    "codexHome": "$TEST_HOME/xdg-state/codexless-linux/codex-home",
+    "unit": "$TEST_HOME/xdg-config/systemd/user/codexless-linux.service",
+    "log": "$TEST_HOME/xdg-state/codexless-linux/logs/server.log"
+  },
+  "checks": [
+    {
+      "name": "linux",
+      "ok": true,
+      "detail": "linux/x64"
+    },
+    {
+      "name": "node",
+      "ok": true,
+      "detail": "v22.23.3"
+    },
+    {
+      "name": "installation",
+      "ok": true,
+      "detail": "0.1.2-preview.1"
+    }
+  ],
+  "upstream": null,
+  "health": {
+    "status": "not_running"
+  },
+  "chatgptEndToEnd": "not_verified"
+}
+
+Codexless public running; defaultCwd=$PROJECT; profile=codex-resolved; consent=always; cua=off; surface=codexless-public-preview-v1
+Codexless public HTTP listening on http://127.0.0.1:44499/mcp; surface=codexless-public-preview-v1
+Codexless public HTTP stopped (SIGTERM)
+
+[install]
+{
+  "ok": true,
+  "action": "updated",
+  "applicationId": "codexless-linux",
+  "paths": {
+    "home": "$TEST_HOME",
+    "data": "$TEST_HOME/xdg-data/codexless-linux",
+    "config": "$TEST_HOME/xdg-config/codexless-linux",
+    "state": "$TEST_HOME/xdg-state/codexless-linux",
+    "app": "$TEST_HOME/xdg-data/codexless-linux/app",
+    "runtime": "$TEST_HOME/xdg-data/codexless-linux/runtime",
+    "bin": "$TEST_HOME/.local/bin",
+    "runtimeConfig": "$TEST_HOME/xdg-config/codexless-linux/runtime.json",
+    "ownership": "$TEST_HOME/xdg-state/codexless-linux/installation.json",
+    "codexHome": "$TEST_HOME/xdg-state/codexless-linux/codex-home",
+    "unit": "$TEST_HOME/xdg-config/systemd/user/codexless-linux.service",
+    "log": "$TEST_HOME/xdg-state/codexless-linux/logs/server.log"
+  },
+  "version": "0.1.2-preview.1",
+  "previousBackup": "$TEST_HOME/xdg-data/codexless-linux/backups/1792505375648-7904b513-75c7-4f9f-9857-bdadfa095a97",
+  "projectTrust": "already_trusted",
+  "serviceStarted": false,
+  "autostartEnabled": false,
+  "next": "codexless-linux-doctor"
+}
+
+
+[update]
+{
+  "ok": true,
+  "action": "updated",
+  "applicationId": "codexless-linux",
+  "paths": {
+    "home": "$TEST_HOME",
+    "data": "$TEST_HOME/xdg-data/codexless-linux",
+    "config": "$TEST_HOME/xdg-config/codexless-linux",
+    "state": "$TEST_HOME/xdg-state/codexless-linux",
+    "app": "$TEST_HOME/xdg-data/codexless-linux/app",
+    "runtime": "$TEST_HOME/xdg-data/codexless-linux/runtime",
+    "bin": "$TEST_HOME/.local/bin",
+    "runtimeConfig": "$TEST_HOME/xdg-config/codexless-linux/runtime.json",
+    "ownership": "$TEST_HOME/xdg-state/codexless-linux/installation.json",
+    "codexHome": "$TEST_HOME/xdg-state/codexless-linux/codex-home",
+    "unit": "$TEST_HOME/xdg-config/systemd/user/codexless-linux.service",
+    "log": "$TEST_HOME/xdg-state/codexless-linux/logs/server.log"
+  },
+  "version": "0.1.2-preview.1",
+  "previousBackup": "$TEST_HOME/xdg-data/codexless-linux/backups/1792505382425-3abcac14-4953-4038-a283-a592c07e4112",
+  "projectTrust": "already_trusted",
+  "serviceStarted": false,
+  "autostartEnabled": false,
+  "next": "codexless-linux-doctor"
+}
+
+
+[rollback]
+{
+  "ok": true,
+  "action": "rolled_back",
+  "applicationId": "codexless-linux",
+  "version": "0.1.2-preview.1",
+  "serviceStarted": false,
+  "configurationPreserved": true
+}
+
+Codexless public running; defaultCwd=$PROJECT; profile=codex-resolved; consent=always; cua=off; surface=codexless-public-preview-v1
+
+[status]
+{
+  "ok": true,
+  "applicationId": "codexless-linux",
+  "installed": true,
+  "systemdAvailable": false,
+  "service": "unavailable",
+  "paths": {
+    "home": "$TEST_HOME",
+    "data": "$TEST_HOME/xdg-data/codexless-linux",
+    "config": "$TEST_HOME/xdg-config/codexless-linux",
+    "state": "$TEST_HOME/xdg-state/codexless-linux",
+    "app": "$TEST_HOME/xdg-data/codexless-linux/app",
+    "runtime": "$TEST_HOME/xdg-data/codexless-linux/runtime",
+    "bin": "$TEST_HOME/.local/bin",
+    "runtimeConfig": "$TEST_HOME/xdg-config/codexless-linux/runtime.json",
+    "ownership": "$TEST_HOME/xdg-state/codexless-linux/installation.json",
+    "codexHome": "$TEST_HOME/xdg-state/codexless-linux/codex-home",
+    "unit": "$TEST_HOME/xdg-config/systemd/user/codexless-linux.service",
+    "log": "$TEST_HOME/xdg-state/codexless-linux/logs/server.log"
+  },
+  "chatgptEndToEnd": "not_verified"
+}
+
+
+[uninstall]
+{
+  "ok": true,
+  "action": "uninstalled",
+  "applicationId": "codexless-linux",
+  "configurationPreserved": true,
+  "statePreserved": true,
+  "backupsPreserved": true
+}
+
+
+[idempotent uninstall from reviewed source]
+{
+  "ok": true,
+  "action": "already_uninstalled",
+  "applicationId": "codexless-linux",
+  "configurationPreserved": true
+}
+

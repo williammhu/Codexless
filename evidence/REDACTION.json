@@ -1,0 +1,259 @@
+{
+  "purpose": "Public-safe copies of existing completed acceptance evidence; no new test execution, source modification, environment change, repack or artifact regeneration.",
+  "sourceRoot": "acceptance-20261020/",
+  "publicRoot": "evidence/",
+  "rules": [
+    "Replace real home/workspace paths and exact hostname with placeholders.",
+    "Preserve public GitHub identities/URLs, candidate hashes, versions, test outcomes and synthetic configuration policy.",
+    "Do not include any original *.private.json files; linux-mcp.redacted.json is an explicitly reviewed derivative containing all 25 original results with hostname replaced.",
+    "Keep initial failed harness/environment attempts separate from final passing acceptance.",
+    "Public reproduction scripts have only documented path/output adaptations and have not been rerun."
+  ],
+  "files": [
+    {
+      "sourceRelativePath": "linux-test.log",
+      "publicRelativePath": "linux-test.log",
+      "originalSha256": "2fc1a1f585edef72f1a23083d15a8e324a36b06925454d50b1743289c2ed9290",
+      "publicSha256": "2fc1a1f585edef72f1a23083d15a8e324a36b06925454d50b1743289c2ed9290",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "npm-ci.log",
+      "publicRelativePath": "npm-ci.log",
+      "originalSha256": "1cc037378b277c5aa08908b7c1cf8c952432237445ac0ebce1f52070e4c838a1",
+      "publicSha256": "1cc037378b277c5aa08908b7c1cf8c952432237445ac0ebce1f52070e4c838a1",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "npm-test.log",
+      "publicRelativePath": "npm-test.log",
+      "originalSha256": "faf21e9029556e1f59061fc671cc0a431ad89ed6322745a48e290efbc1909b24",
+      "publicSha256": "faf21e9029556e1f59061fc671cc0a431ad89ed6322745a48e290efbc1909b24",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "platform-test.log",
+      "publicRelativePath": "platform-test.log",
+      "originalSha256": "2ab44265bdea014022b226130ec2f12d4d704968b14d9d8a034fa50ac2f70aee",
+      "publicSha256": "2ab44265bdea014022b226130ec2f12d4d704968b14d9d8a034fa50ac2f70aee",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "syntax.json",
+      "publicRelativePath": "syntax.json",
+      "originalSha256": "5f74d6dfdeb10d6fb0003acfe9d4b669f968adda06ff97dee2e334839f6bb3c7",
+      "publicSha256": "5f74d6dfdeb10d6fb0003acfe9d4b669f968adda06ff97dee2e334839f6bb3c7",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "ubuntu-acceptance.public.json",
+      "publicRelativePath": "ubuntu-acceptance.public.json",
+      "originalSha256": "a1bb93a0b3e1507bd73550e44a4b83fde056590a48bd4b38c22ddf3d77afa89c",
+      "publicSha256": "a1bb93a0b3e1507bd73550e44a4b83fde056590a48bd4b38c22ddf3d77afa89c",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "packaging/packaging-result.json",
+      "publicRelativePath": "packaging/packaging-result.json",
+      "originalSha256": "07d653cd241dec0ce391df9a2d19d09ab34af47fdd3b3b1ad2f8f4dd2121bcb5",
+      "publicSha256": "07d653cd241dec0ce391df9a2d19d09ab34af47fdd3b3b1ad2f8f4dd2121bcb5",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "packaging/packaging-report.md",
+      "publicRelativePath": "packaging/packaging-report.md",
+      "originalSha256": "fe393f4828b2e7fcff767bd3a8cc12d478a664839fa0d7baaadf8f9d4937006c",
+      "publicSha256": "fe393f4828b2e7fcff767bd3a8cc12d478a664839fa0d7baaadf8f9d4937006c",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "packaging/npm-pack.json",
+      "publicRelativePath": "packaging/npm-pack.json",
+      "originalSha256": "d9e0455e9c8f4e7de9b7e634420eac69f37f9b994361887e3151836254d9812e",
+      "publicSha256": "d9e0455e9c8f4e7de9b7e634420eac69f37f9b994361887e3151836254d9812e",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "packaging/npm-pack.stderr.log",
+      "publicRelativePath": "packaging/npm-pack.stderr.log",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "packaging/release-identity.log",
+      "publicRelativePath": "packaging/release-identity.log",
+      "originalSha256": "359c35e82eecf012af6e0a4c8684bed539d990034a9cb0acd48c0d046a103279",
+      "publicSha256": "359c35e82eecf012af6e0a4c8684bed539d990034a9cb0acd48c0d046a103279",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "packaging/windows-lifecycle-not-run.log",
+      "publicRelativePath": "packaging/windows-lifecycle-not-run.log",
+      "originalSha256": "955688e16e60731581ea9863d1827262911d94dbb73f57e8ebedf957f844397d",
+      "publicSha256": "955688e16e60731581ea9863d1827262911d94dbb73f57e8ebedf957f844397d",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "linux-mcp.private.json",
+      "publicRelativePath": "linux-mcp.redacted.json",
+      "originalSha256": "15c6c0e11f4057d30854d86d09489d278ab34517872f3a9302faef38fb5fafeb",
+      "publicSha256": "45b0e7926add64af8ed2b8b2bc5d48e851eca31d49c7db1a64e2f72c46f0f461",
+      "changes": [
+        "Exact hostname in uname -a replaced with <HOSTNAME>; all 25 existing results and non-private runtime details preserved. The original private filename is referenced only as provenance and is not copied."
+      ]
+    },
+    {
+      "sourceRelativePath": "security/security-report.json",
+      "publicRelativePath": "security/security-report.json",
+      "originalSha256": "74144b12a0719f5942ee2271ac2f07958b2b4b41d58486bf1cf8c65dc1e21c2d",
+      "publicSha256": "74144b12a0719f5942ee2271ac2f07958b2b4b41d58486bf1cf8c65dc1e21c2d",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "security/security.log",
+      "publicRelativePath": "security/security.log",
+      "originalSha256": "e001253df74aaaa7b5aa3a58a2c472ba541c05c6905d2ea3af4b63f9daa4041f",
+      "publicSha256": "e001253df74aaaa7b5aa3a58a2c472ba541c05c6905d2ea3af4b63f9daa4041f",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "lifecycle/installed-lifecycle-result.json",
+      "publicRelativePath": "lifecycle/installed-lifecycle-result.json",
+      "originalSha256": "940ec3ee9de9374ed68132fb5470b35aa6c15d02df937ff22673212ce75d7b52",
+      "publicSha256": "940ec3ee9de9374ed68132fb5470b35aa6c15d02df937ff22673212ce75d7b52",
+      "changes": [
+        "Unchanged bytes; public-safe as recorded."
+      ]
+    },
+    {
+      "sourceRelativePath": "lifecycle/installed-lifecycle.internal.log",
+      "publicRelativePath": "lifecycle/installed-lifecycle.log",
+      "originalSha256": "76ac7bda0417e894655b98a4060ffa101d7ce8b9ecf8467263a182cd78aa45bf",
+      "publicSha256": "76ac7bda0417e894655b98a4060ffa101d7ce8b9ecf8467263a182cd78aa45bf",
+      "changes": [
+        "Public filename/location changed; original path-redacted bytes preserved unchanged."
+      ]
+    },
+    {
+      "sourceRelativePath": "security/README.md",
+      "publicRelativePath": "security/README.md",
+      "originalSha256": "dab09ceb82fe2e26ab2e6c0e3a09642896ea4ae8b5e51384934a3be3289e3601",
+      "publicSha256": "2e3af147e583891a336f04fefefe68c6ea5255ad2e61b1fa85bf602398e91030",
+      "changes": [
+        "Updated diagnostic links and documented public harness output handling; original test claims unchanged."
+      ]
+    },
+    {
+      "sourceRelativePath": "security/actual-mcp-security.mjs",
+      "publicRelativePath": "security/actual-mcp-security.mjs",
+      "originalSha256": "3904c1113230bdeddd88f0215cdc1ff8bf88541d78e04e8991b05e0f24144710",
+      "publicSha256": "b6f0de68268bdd82ed38b77ba542f357d5d553ab76ca539a6b50365cfd718516",
+      "changes": [
+        "Public reproduction output directory isolated; candidate source lookup remains environment-parameterized. Not rerun."
+      ]
+    },
+    {
+      "sourceRelativePath": "lifecycle/README.md",
+      "publicRelativePath": "lifecycle/README.md",
+      "originalSha256": "6e96cab5dc29c86bbbfd975ee70c9e36c53e5ceb4e5d6c0ae2d47b846eb0cea3",
+      "publicSha256": "e58a3c319dcd630486ff26f8fd71a7586573567359a0ee8e6bbf0c5024096f4f",
+      "changes": [
+        "Public reproduction instructions parameterized and log/diagnostic links updated; original run outcomes unchanged."
+      ]
+    },
+    {
+      "sourceRelativePath": "lifecycle/installed-lifecycle.mjs",
+      "publicRelativePath": "lifecycle/installed-lifecycle.mjs",
+      "originalSha256": "7cd62132835f7814a50ab729d67d496c4b4f7f2220bcd0bf8fea166592a3a364",
+      "publicSha256": "26f340eed5dc0235e2ec2ae1a185635a4c561d073a298cb0287613579df40699",
+      "changes": [
+        "Only public reproduction source/executable/client/output paths parameterized; test assertions unchanged. This public copy has not been rerun."
+      ]
+    },
+    {
+      "sourceRelativePath": "security/harness-first-attempt-report.json",
+      "publicRelativePath": "diagnostics/security-first-attempt/report.json",
+      "originalSha256": "1e6555885553a74ab56a5f35926359688d6d327b71fa85ba288fbe4e754daa67",
+      "publicSha256": "b0c6fb0a75cadba603233d53947eb684292de5ffd138a7777eb3679bfcf63948",
+      "changes": [
+        "Personal path and/or hostname replaced by placeholders; test outcomes preserved.",
+        "Moved into separate initial-attempt diagnostic directory; not included in final PASS counts."
+      ]
+    },
+    {
+      "sourceRelativePath": "security/harness-first-attempt.log",
+      "publicRelativePath": "diagnostics/security-first-attempt/run.log",
+      "originalSha256": "7098c8018992d577b9abd9b909051f9d1d39382bea3e774c0518d7a8d0f51eb0",
+      "publicSha256": "246374335924691f770e1c17f56061cc19820ab4a72e57a6f45060a1a58dad10",
+      "changes": [
+        "Personal path and/or hostname replaced by placeholders; test outcomes preserved.",
+        "Moved into separate initial-attempt diagnostic directory; not included in final PASS counts."
+      ]
+    },
+    {
+      "sourceRelativePath": "lifecycle/attempt1-tmp-home-result.json",
+      "publicRelativePath": "diagnostics/lifecycle-tmp-home/result.json",
+      "originalSha256": "7b58518ce6c82d124122f7389d5831ebec29d6c57b4e75069b936ccd8d9590b6",
+      "publicSha256": "7b58518ce6c82d124122f7389d5831ebec29d6c57b4e75069b936ccd8d9590b6",
+      "changes": [
+        "Public filename/location changed; original path-redacted bytes preserved unchanged."
+      ]
+    },
+    {
+      "sourceRelativePath": "lifecycle/attempt1-tmp-home.internal.log",
+      "publicRelativePath": "diagnostics/lifecycle-tmp-home/run.log",
+      "originalSha256": "cca5134d00aa84c788269104e2fab8e030ea216f30c7df3431d2a4386b085c43",
+      "publicSha256": "cca5134d00aa84c788269104e2fab8e030ea216f30c7df3431d2a4386b085c43",
+      "changes": [
+        "Public filename/location changed; original path-redacted bytes preserved unchanged."
+      ]
+    },
+    {
+      "sourceRelativePath": null,
+      "publicRelativePath": "diagnostics/security-first-attempt/README.md",
+      "originalSha256": null,
+      "publicSha256": "63cc8713afdb8fc8d88f01212ee399d7c56313124193c21590a51e0a571a87b5",
+      "changes": [
+        "New provenance-only explanation derived from existing security README and failed-attempt evidence."
+      ]
+    },
+    {
+      "sourceRelativePath": null,
+      "publicRelativePath": "diagnostics/lifecycle-tmp-home/README.md",
+      "originalSha256": null,
+      "publicSha256": "fa39dbd80a32c50ec6fe60008d766eb1f61577a9023adf690ee9eb7049347674",
+      "changes": [
+        "New provenance-only explanation derived from existing lifecycle README and failed-attempt evidence."
+      ]
+    }
+  ]
+}

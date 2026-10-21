@@ -1,0 +1,18 @@
+PASS actual stdio MCP initialize and 45-tool discovery
+PASS legacy workspace/on-request inherit resolves actual :workspace
+PASS explicit readOnly downscopes official profile
+PASS inherit write in trusted workspace succeeds
+PASS inherit write to sibling outside workspace denied with no mutation
+PASS readOnly write inside workspace denied with no mutation
+PASS inherit request from untrusted sibling cwd rejected
+PASS remote permissionProfile override rejected by public schema
+PASS remote permissions override rejected by public schema
+PASS remote sandbox_mode override rejected by public schema
+PASS remote approval_policy override rejected by public schema
+PASS remote trust_level override rejected by public schema
+PASS read_many absolute outside-root path rejected
+PASS read_many symlink escape rejected
+PASS precise_edit symlink escape rejected and sibling unchanged
+PASS metered prepare, duplicate suppression and decline without model turn
+PASS isolated Codex config unchanged and no credential files created
+Actual MCP security acceptance PASS (17 checks)

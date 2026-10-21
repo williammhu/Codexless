@@ -1,0 +1,69 @@
+{
+  "sourceTree": "3f44470de142222788f8f6e22e7926684062ad97",
+  "platform": "linux",
+  "architecture": "x64",
+  "nodeVersion": "v22.23.3",
+  "codexVersion": "codex-cli 0.163.0",
+  "launchArgv": [
+    "<NODE22>",
+    "<SOURCE>/scripts/launch.mjs",
+    "stdio"
+  ],
+  "isolation": {
+    "codexHome": "<FIXTURE>/codex-home",
+    "home": "<FIXTURE>/home",
+    "sandbox_mode": "workspace-write",
+    "approval_policy": "on-request",
+    "trustedProject": "<FIXTURE>/trusted project",
+    "fixtureOutsideTmp": true,
+    "sourceUnchanged": true
+  },
+  "checks": [
+    {
+      "check": "actual stdio MCP initialize and 45-tool discovery",
+      "status": "pass"
+    },
+    {
+      "check": "legacy workspace/on-request inherit resolves actual :workspace",
+      "status": "pass",
+      "exitCode": 0,
+      "permissionProfile": ":workspace",
+      "permissionCeiling": ":workspace"
+    },
+    {
+      "check": "explicit readOnly downscopes official profile",
+      "status": "pass",
+      "exitCode": 0,
+      "permissionProfile": ":read-only"
+    },
+    {
+      "check": "inherit write in trusted workspace succeeds",
+      "status": "pass",
+      "exitCode": 0
+    },
+    {
+      "check": "inherit write to sibling outside workspace denied with no mutation",
+      "status": "pass",
+      "exitCode": 1,
+      "permissionProfile": ":workspace",
+      "stderr": "node:fs:2430\n    return binding.writeFileUtf8(\n                   ^\n\nError: EROFS: read-only file system, open '<FIXTURE>/outside-write-rejected.txt'\n    at Object.writeFileSync (node:fs:2430:20)\n    at [eval]:1:20\n    at runScriptInThisContext (node:internal/vm:209:10)\n    at node:internal/process/execution:446:12\n    at [eval]-wrapper:6:24\n    at runScriptInContext (node:internal/process/execution:444:60)\n    at evalFunction (node:internal/process/execution:279:30)\n    at evalTypeScript (node:internal/process/execution:291:3)\n    at node:internal/main/eval_string:74:3 {\n  errno: -30,\n  code: 'EROFS',\n  syscall: 'open',\n  path: '<FIXTURE>/outside-write-rejected.txt'\n}\n\nNode.js v22.23.3\n"
+    },
+    {
+      "check": "readOnly write inside workspace denied with no mutation",
+      "status": "pass",
+      "exitCode": 1,
+      "permissionProfile": ":read-only",
+      "stderr": "node:fs:2430\n    return binding.writeFileUtf8(\n                   ^\n\nError: EROFS: read-only file system, open 'readonly-denied.txt'\n    at Object.writeFileSync (node:fs:2430:20)\n    at [eval]:1:20\n    at runScriptInThisContext (node:internal/vm:209:10)\n    at node:internal/process/execution:446:12\n    at [eval]-wrapper:6:24\n    at runScriptInContext (node:internal/process/execution:444:60)\n    at evalFunction (node:internal/process/execution:279:30)\n    at evalTypeScript (node:internal/process/execution:291:3)\n    at node:internal/main/eval_string:74:3 {\n  errno: -30,\n  code: 'EROFS',\n  syscall: 'open',\n  path: 'readonly-denied.txt'\n}\n\nNode.js v22.23.3\n"
+    },
+    {
+      "check": "inherit request from untrusted sibling cwd rejected",
+      "status": "pass",
+      "error": "{\"error\":\"Codex has no explicitly trusted project/root covering cwd <FIXTURE>/untrusted-sibling; Codexless will not create trust as a side effect of permission resolution.\",\"errorCode\":\"PERMISSION_APPROVAL_REQUIRED\",\"nextActions\":[\"Explicitly trust/authorize the target path in Codex or local Codexless policy, then retry.\",\"Use a cwd already covered by an explicitly trusted Codex project/root.\"]}"
+    }
+  ],
+  "modelTurnStarted": false,
+  "status": "fail",
+  "failure": "AssertionError [ERR_ASSERTION]: SyntaxError: Unexpected token 'I', \"Input vali\"... is not valid JSON\n    at file://<HARNESS>/actual-mcp-security.mjs:82:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)",
+  "serverStderr": "Codexless public running; defaultCwd=<FIXTURE>/trusted project; profile=codex-resolved; consent=always; cua=off; surface=codexless-public-preview-v1\n[codex-app-server] {\"timestamp\":\"2026-10-20T14:04:57.245510Z\",\"level\":\"WARN\",\"fields\":{\"message\":\"failed to warm featured plugin ids cache\",\"error\":\"remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex failed with status 401 Unauthorized: {\\\"detail\\\":\\\"Unauthorized\\\"}\"},\"target\":\"codex_core_plugins::manager\"}\n[codex-app-server] {\"timestamp\":\"2026-10-20T14:04:57.498872Z\",\"level\":\"WARN\",\"fields\":{\"message\":\"failed to send server notification to client: SendError { .. }\"},\"target\":\"codex_app_server::outgoing_message\"}\n[codex-app-server] {\"timestamp\":\"2026-10-20T14:04:57.631067Z\",\"level\":\"WARN\",\"fields\":{\"message\":\"failed to warm featured plugin ids cache\",\"error\":\"remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex failed with status 401 Unauthorized: {\\\"detail\\\":\\\"Unauthorized\\\"}\"},\"target\":\"codex_core_plugins::manager\"}\n",
+  "fixtureRemoved": true
+}

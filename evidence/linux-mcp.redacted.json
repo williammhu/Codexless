@@ -1,0 +1,132 @@
+{
+  "platform": "linux",
+  "codexVersion": "0.163.0",
+  "checks": [
+    {
+      "check": "stdio initialize / independent server identity",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "tools/list public contract",
+      "status": "pass",
+      "detail": 45
+    },
+    {
+      "check": "uname -s",
+      "status": "pass",
+      "detail": "Linux"
+    },
+    {
+      "check": "uname -a",
+      "status": "pass",
+      "detail": "Linux <HOSTNAME> 6.8.0-138-generic #138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  7 13:43:15 UTC  x86_64 x86_64 x86_64 GNU/Linux"
+    },
+    {
+      "check": "pwd with spaces",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "git status / branch",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "git commit history read",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "project context discovers AGENTS.md",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "directory list / file search",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "read absolute file and AGENTS.md",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "sandboxed create / write verification",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "guarded edit preview",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "sandboxed guarded edit / verify",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "git diff",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "authorized move / delete within fixture",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "out-of-root / symlink escape rejected",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "readOnly command write denied",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "nested Codex bypass rejected",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "remote permission override rejected by schema",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "stderr and nonzero exit propagation",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "timeout and command cleanup",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "metered model prepare / duplicate / decline without model call",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "loopback health / ready / no project path leakage",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "HTTP foreign Origin rejected",
+      "status": "pass",
+      "detail": true
+    },
+    {
+      "check": "HTTP initialize / discovery / actual Linux tool call",
+      "status": "pass",
+      "detail": true
+    }
+  ],
+  "modelTurnStarted": false
+}

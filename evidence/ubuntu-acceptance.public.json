@@ -1,0 +1,287 @@
+{
+  "date": "2026-10-20",
+  "platform": "Ubuntu 22.04.5 LTS x86_64",
+  "versions": {
+    "node": "22.23.3",
+    "npm": "10.9.9",
+    "codex": "0.163.0",
+    "git": "2.34.1"
+  },
+  "baseCommit": "394e8f4d356f064c27143a8580c3ba4028373e21",
+  "candidateTree": "3f44470de142222788f8f6e22e7926684062ad97",
+  "buildId": "31dc0d0614200479c14822ea5536ffc4abefa0e52af486e9fad2728d7ded1b3d",
+  "baselineMcp": {
+    "status": "PASS",
+    "checks": [
+      {
+        "check": "stdio initialize / independent server identity",
+        "status": "pass"
+      },
+      {
+        "check": "tools/list public contract",
+        "status": "pass"
+      },
+      {
+        "check": "uname -s",
+        "status": "pass"
+      },
+      {
+        "check": "uname -a",
+        "status": "pass"
+      },
+      {
+        "check": "pwd with spaces",
+        "status": "pass"
+      },
+      {
+        "check": "git status / branch",
+        "status": "pass"
+      },
+      {
+        "check": "git commit history read",
+        "status": "pass"
+      },
+      {
+        "check": "project context discovers AGENTS.md",
+        "status": "pass"
+      },
+      {
+        "check": "directory list / file search",
+        "status": "pass"
+      },
+      {
+        "check": "read absolute file and AGENTS.md",
+        "status": "pass"
+      },
+      {
+        "check": "sandboxed create / write verification",
+        "status": "pass"
+      },
+      {
+        "check": "guarded edit preview",
+        "status": "pass"
+      },
+      {
+        "check": "sandboxed guarded edit / verify",
+        "status": "pass"
+      },
+      {
+        "check": "git diff",
+        "status": "pass"
+      },
+      {
+        "check": "authorized move / delete within fixture",
+        "status": "pass"
+      },
+      {
+        "check": "out-of-root / symlink escape rejected",
+        "status": "pass"
+      },
+      {
+        "check": "readOnly command write denied",
+        "status": "pass"
+      },
+      {
+        "check": "nested Codex bypass rejected",
+        "status": "pass"
+      },
+      {
+        "check": "remote permission override rejected by schema",
+        "status": "pass"
+      },
+      {
+        "check": "stderr and nonzero exit propagation",
+        "status": "pass"
+      },
+      {
+        "check": "timeout and command cleanup",
+        "status": "pass"
+      },
+      {
+        "check": "metered model prepare / duplicate / decline without model call",
+        "status": "pass"
+      },
+      {
+        "check": "loopback health / ready / no project path leakage",
+        "status": "pass"
+      },
+      {
+        "check": "HTTP foreign Origin rejected",
+        "status": "pass"
+      },
+      {
+        "check": "HTTP initialize / discovery / actual Linux tool call",
+        "status": "pass"
+      }
+    ],
+    "count": 25
+  },
+  "extraMcpSecurity": {
+    "status": "pass",
+    "count": 17,
+    "checks": [
+      {
+        "check": "actual stdio MCP initialize and 45-tool discovery",
+        "status": "pass"
+      },
+      {
+        "check": "legacy workspace/on-request inherit resolves actual :workspace",
+        "status": "pass"
+      },
+      {
+        "check": "explicit readOnly downscopes official profile",
+        "status": "pass"
+      },
+      {
+        "check": "inherit write in trusted workspace succeeds",
+        "status": "pass"
+      },
+      {
+        "check": "inherit write to sibling outside workspace denied with no mutation",
+        "status": "pass"
+      },
+      {
+        "check": "readOnly write inside workspace denied with no mutation",
+        "status": "pass"
+      },
+      {
+        "check": "inherit request from untrusted sibling cwd rejected",
+        "status": "pass"
+      },
+      {
+        "check": "remote permissionProfile override rejected by public schema",
+        "status": "pass"
+      },
+      {
+        "check": "remote permissions override rejected by public schema",
+        "status": "pass"
+      },
+      {
+        "check": "remote sandbox_mode override rejected by public schema",
+        "status": "pass"
+      },
+      {
+        "check": "remote approval_policy override rejected by public schema",
+        "status": "pass"
+      },
+      {
+        "check": "remote trust_level override rejected by public schema",
+        "status": "pass"
+      },
+      {
+        "check": "read_many absolute outside-root path rejected",
+        "status": "pass"
+      },
+      {
+        "check": "read_many symlink escape rejected",
+        "status": "pass"
+      },
+      {
+        "check": "precise_edit symlink escape rejected and sibling unchanged",
+        "status": "pass"
+      },
+      {
+        "check": "metered prepare, duplicate suppression and decline without model turn",
+        "status": "pass"
+      },
+      {
+        "check": "isolated Codex config unchanged and no credential files created",
+        "status": "pass"
+      }
+    ]
+  },
+  "packaging": {
+    "status": "PASS",
+    "fileCount": 125,
+    "manifestedFilesVerified": 124,
+    "linuxLauncherCount": 16,
+    "packageSha256": "43c7e2c6fe24a6b87a91bdeccd3fa574f96da6dca887daec9c605ca91ce497d4"
+  },
+  "npmCi": "PASS",
+  "npmTest": "PASS",
+  "linuxTest": "PASS",
+  "platformRegression": {
+    "status": "PASS",
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0
+  },
+  "windowsInstallerNative": "NOT RUN: Linux host",
+  "macosNative": "NOT RUN: Linux host",
+  "privateCanonicalParity": "NOT RUN: unavailable private gate",
+  "meteredCodexTurn": "NOT RUN: model-free scope",
+  "systemdStartAndEnable": "NOT RUN: intentionally no persistent service",
+  "personalInstallationUnchanged": true,
+  "lifecycle": {
+    "status": "PASS",
+    "count": 11,
+    "checks": [
+      {
+        "check": "real source installed with production dependency set, dedicated Node/npm, private config and exact trust",
+        "status": "pass"
+      },
+      {
+        "check": "installed lifecycle doctor",
+        "status": "pass"
+      },
+      {
+        "check": "installed stdio initialize / public tools / actual uname",
+        "status": "pass"
+      },
+      {
+        "check": "installed foreground loopback HTTP health / readiness / MCP / Linux command / clean stop",
+        "status": "pass"
+      },
+      {
+        "check": "idempotent reinstall preserves runtime configuration and isolated trust",
+        "status": "pass"
+      },
+      {
+        "check": "same-candidate update produces complete app/runtime/dependency integrity backup",
+        "status": "pass"
+      },
+      {
+        "check": "stdio Linux tool remains functional after verified same-version rollback",
+        "status": "pass"
+      },
+      {
+        "check": "verified same-version rollback preserves configuration and state",
+        "status": "pass"
+      },
+      {
+        "check": "no user service started, enabled or autostart consent created",
+        "status": "pass"
+      },
+      {
+        "check": "uninstall removes owned application/runtime/wrappers/unit and preserves config/state/backups/fake-original config",
+        "status": "pass"
+      },
+      {
+        "check": "repeated uninstall is safe",
+        "status": "pass"
+      }
+    ],
+    "sameVersionRollback": true,
+    "crossHistoricalVersionDowngrade": "NOT RUN",
+    "firstTmpHomeAttempt": "FAIL: official Codex helper creation safety restriction; same candidate passed with synthetic HOME moved outside /tmp"
+  },
+  "finalCommit": "b2f727cfed500922b996f74ae94e0c78813fc668",
+  "commits": [
+    "61c529c3f722348639500f7cdfed64b75a6793af",
+    "b2f727cfed500922b996f74ae94e0c78813fc668"
+  ],
+  "syntax": {
+    "nodeSyntaxFiles": 116,
+    "linuxShellSyntaxFiles": 16,
+    "status": "PASS"
+  },
+  "nativeHostedCI": {
+    "runUrl": "https://github.com/williammhu/Codexless/actions/runs/39437027257",
+    "head": "b2f727cfed500922b996f74ae94e0c78813fc668",
+    "ubuntu": "PASS",
+    "windows": "PASS",
+    "macos": "QUEUED",
+    "scope": "synthetic model-free peers; not live-Codex/complete installer acceptance"
+  },
+  "publicPrivacyScan": "PASS"
+}

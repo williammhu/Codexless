@@ -1,292 +1,59 @@
-<div align="center">
+# PR #17: existing Ubuntu candidate evidence
 
-# Codexless
+This evidence snapshot responds to [the maintainer's request](https://github.com/liyana31811/Codexless/pull/17#issuecomment-6293037517). It publishes public-safe copies of the **already reported** 2026-10-20 results and the original npm artifact. Preparing this snapshot did not rerun acceptance tests, repack the npm artifact, change the test/runtime environment, or change the PR source branch.
 
-### ChatGPT just started doing Codex's work.
+## Exact candidate
 
-**Give ChatGPT the local Codex toolbox already on your computer — through a supported ChatGPT app/MCP connection.**
+| Identity | Value |
+| --- | --- |
+| Final PR commit | `b2f727cfed500922b996f74ae94e0c78813fc668` |
+| Final Git tree | `3f44470de142222788f8f6e22e7926684062ad97` |
+| Candidate build ID | `31dc0d0614200479c14822ea5536ffc4abefa0e52af486e9fad2728d7ded1b3d` |
+| Preserved manifest sourceRevision | `394e8f4d356f064c27143a8580c3ba4028373e21` |
+| Original package SHA256 | `43c7e2c6fe24a6b87a91bdeccd3fa574f96da6dca887daec9c605ca91ce497d4` |
+| Original package size | 372485 bytes |
 
-[中文](README.zh-CN.md)
+The tests ran on the maintainer's two patches applied, in order, to `394e8f4d356f064c27143a8580c3ba4028373e21`. That staged candidate tree was then published as commits `61c529c3f722348639500f7cdfed64b75a6793af` and `b2f727cfed500922b996f74ae94e0c78813fc668`, with the identical final tree. The manifest's sourceRevision remains the supplied base, rather than being rewritten to the later commit. The packaging report's 12 changed files are relative to that base, not the upstream PR base.
 
-![Technical Preview](https://img.shields.io/badge/status-technical_preview-6b7280)
-![Windows](https://img.shields.io/badge/Windows-supported-0078D4?logo=windows11&logoColor=white)
-![Apple Silicon macOS](https://img.shields.io/badge/macOS-Apple_Silicon-111111?logo=apple&logoColor=white)
-[![Apache-2.0 License](https://img.shields.io/badge/license-Apache--2.0-22c55e.svg)](LICENSE)
+Environment recorded for the existing runs: Ubuntu 22.04.5 LTS x86_64; Node.js 22.23.3; npm 10.9.9; official Codex CLI 0.163.0; Git 2.34.1. Runtime acceptance used isolated synthetic HOME/CODEX_HOME/XDG/project fixtures, no credentials, and no model turn.
 
-**Stay in ChatGPT. Work on your local machine. Bring in Codex only when you actually need it.**
+## Evidence map
 
-</div>
+| Existing result | Public records |
+| --- | --- |
+| 25 actual MCP checks | `evidence/linux-test.log`, `evidence/linux-mcp.redacted.json`, `evidence/ubuntu-acceptance.public.json` |
+| Extra 17 actual-MCP security checks | `evidence/security/security-report.json`, `evidence/security/security.log`, accompanying README and harness |
+| 11 actual installed-lifecycle checks | `evidence/lifecycle/installed-lifecycle-result.json`, `evidence/lifecycle/installed-lifecycle.log`, accompanying README and harness |
+| npm dependency installation and full suite | `evidence/npm-ci.log`, `evidence/npm-test.log` |
+| 12 Ubuntu platform regression checks | `evidence/platform-test.log` |
+| Syntax summary | `evidence/syntax.json` (116 MJS, 16 launchers; summary record, not a per-file transcript) |
+| Original package and exact manifest | `artifact/codexless-0.1.2-preview.1.tgz`, `artifact/release-manifest.json` |
+| Actual package member hashes/modes/sizes | `artifact/payload-inventory.json`, `artifact/payload-inventory.tsv`, `artifact/PAYLOAD-SHA256SUMS` |
+| Original packaging audit | `evidence/packaging/`, `artifact-audit.md` |
+| Initial unsuccessful attempts | `evidence/diagnostics/`, kept separate from final pass counts |
+| Source-to-public-copy mapping | `evidence/REDACTION.json` |
 
-Codexless lets the ChatGPT you already use call a reviewed set of local tools backed by the Codex environment on your machine. The default entry is ordinary Chat: inspect a project, edit files, run commands, work in Chrome or Edge, and control an already-connected Excel workbook without moving the whole task into another app.
+The payload inventory records the tar archive's file modes, rather than the modes of copied/extracted files. The package contains 125 regular files: 124 manifested payloads plus the manifest itself. The original package is not repacked or redacted; it contains the public candidate payload only. Its SHA256 can legitimately differ from another pack of the same source; the inventory identifies the actual published bytes.
 
-When a task genuinely needs the Codex model, Codexless can call Codex explicitly. Ordinary supported local-tool actions do not call the Codex model and therefore do not create Codex model usage.
+## Outcomes and limits
 
-> Give this repository to the ChatGPT you already use and ask it to check your machine, explain the setup, and tell you which capabilities will be available.
+The recorded final runs passed 25/25 baseline actual MCP checks, 17/17 additional actual-MCP security checks and 11/11 installed lifecycle checks. The 7 Node lifecycle/process-cleanup checks in `linux-test.log` are a separate suite from the 11 installed-lifecycle checks. `npm test` explicitly skips the native Windows installer on this Linux host.
 
----
+Two initial failures are retained as provenance, not counted as final successful checks:
 
-## Codex and Codexless
+1. The first security harness assumed a JSON response for the SDK's plain-text schema error and stopped. Only the external harness parser was corrected; the fresh-fixture final run passed 17/17 without candidate-source changes.
+2. The first installed-lifecycle fixture used a synthetic HOME beneath `/tmp`; official Codex refused creation of its sandbox helper aliases there. Moving only the synthetic HOME/XDG fixture outside `/tmp` allowed the same candidate and permissions to pass 11/11.
 
-### How much of the local toolbox is available?
+The installed rollback restored an integrity-checked **same-version** backup. It does not establish historical-release migration or downgrade support. The existing packaging audit constructed the exact Windows fixture on Linux, without executing the PowerShell installer. The three public canonical files matched the public baseline; this does not certify private household canonical parity.
 
-| Capability family | Codex | Codexless 0.1.2 Preview |
-| --- | :---: | :---: |
-| Local files / Git / bounded terminal commands | ✅ | ✅ |
-| Chrome / Edge Browser | ✅ | ✅ |
-| Live Excel / Document Control | ✅ | ✅ |
-| Skills / project rules | ✅ | ✅ Direct reuse |
-| Windows Computer Use / CUA | ✅ | — Not public yet |
+Hosted Ubuntu/Windows CI on the final commit is linked in [run 39437027257](https://github.com/williammhu/Codexless/actions/runs/39437027257); its synthetic peers are distinct from local live-Codex acceptance. Any CI status in the copied summary is a historical observation made during the earlier report, not a new status check.
 
-**✅ means the main user path for that capability family is available. It does not mean every internal Codex primitive is exposed 1:1.** Long-tail capabilities are promoted only after they have been reviewed and tested for the public surface.
+**Not run/not certified here:** complete native Windows/macOS installer and live-Codex acceptance; private canonical parity; Linux arm64 real-machine acceptance; Browser/Excel; a metered model turn; account Tunnel/ChatGPT E2E for this core candidate; historical-release downgrade; persistent systemd start/enable. Personal integration deployment results are not evidence for this core candidate. No merge, release or formal platform-support approval is asserted.
 
-### The workflow is different
+## Integrity verification
 
-| Workflow | Codex | Codexless |
-| --- | --- | --- |
-| Main entry | Codex App / CLI / Remote | **ChatGPT Chat on a supported surface** |
-| Everyday workspace | Codex | **Your current Chat** |
-| Local tool execution | Inside the Codex workflow | **Called directly from normal Chat** |
-| Skills / project environment | Native | **Reuses the existing Codex environment** |
-| When the Codex model is needed | Normal execution path | **Called explicitly when needed** |
+From this directory, `sha256sum -c SHA256SUMS` verifies the public snapshot. `python3 verify-evidence.py` additionally reads the existing package in memory and verifies every member's bytes/mode/size, the separate manifest, all 124 manifest payloads and the 16 LF/executable Linux launchers. It does not install or start Codexless and does not run acceptance tests.
 
-**Codex: enter Codex to work.**
+The downloadable ZIP is an evidence container, not a newly built application package. `DOWNLOADS.sha256` (published beside it) checks that container; `SHA256SUMS` inside checks its contents. Original-to-public digests and redaction notes are in `evidence/REDACTION.json`. Private snapshots/configuration, credentials and unrelated machine data are omitted. Published harness path adaptations are explicitly disclosed and were not rerun as part of publication.
 
-**Codexless: stay in normal Chat and use much of the local toolbox from there.**
-
-Codexless is not trying to rebuild a second Codex. The point is to make useful local capabilities available from the ChatGPT conversation you already use.
-
----
-
-## What can it do?
-
-### Local project work
-
-ChatGPT can inspect projects, read and edit files, run bounded commands, use Git and local CLIs, and verify results. Project rules and Codex Skills can be reused instead of maintaining a second set of instructions.
-
-### Chrome and Edge Browser
-
-The public Browser surface supports both **Chrome and Edge**:
-
-- tab and page reads plus viewport screenshots;
-- open, close, and navigation;
-- semantic clicks and text entry;
-- bounded scrolling and `Enter` / `Tab` / `Escape`;
-- prepared uploads and downloads.
-
-Browser work uses the selected local browser profile and its existing site login state. Local file upload additionally requires the ChatGPT browser extension's **Allow access to file URLs** setting.
-
-Website access follows ChatGPT's **Agent permissions**. If default Browsing is **Requires approval**, first access to a new origin can require approval; **Always allow** removes those per-site browsing prompts while site-specific exceptions still apply. Codexless does not bypass or silently widen those permissions.
-
-The current public Browser adapter expects one connected extension backend per browser family. If multiple Chrome profiles expose extension backends at the same time, Codexless fails closed instead of guessing which signed-in profile to control; enable the extension only in the profile you intend to use until an upstream profile/backend selector is available.
-
-Codexless does **not** expose arbitrary JavaScript, raw selectors, arbitrary coordinates, unrestricted keyboard input, generic CDP, or automatic Computer Use fallback on the public surface.
-
-### Live Excel / Document Control
-
-0.1.2 adds a bounded public Excel Preview for an already-connected workbook:
-
-- `excel_status`
-- `excel_read_sheets_metadata`
-- `excel_read_ranges`
-- `excel_search_workbook`
-- `excel_write_range`
-- `excel_format_range`
-
-The broader dynamic Excel gateway remains internal for now. Public Excel does not expose generic Office scripting, a raw MCP executor, or the wider dynamic tool surface.
-
-For writes and formatting, a successful dispatch is not automatically treated as business completion. Codexless keeps dispatch evidence and workbook verification distinct and avoids blind replay when a mutation result is uncertain.
-
-### Call Codex when the model is actually needed
-
-Before a metered Codex call, normal Chat shows a compact **text approval** with the task, model/reasoning information, current quota context, and an exact Task ID, then asks for **Yes / No**.
-
-If approved, the task runs in the background. When it reaches a terminal state, Codexless returns a compact text Result with the outcome, mutation/verification evidence, any remaining blocker, quota context, and the same Task ID.
-
-The underlying task binding remains single-use and replay-safe: a stale or already-consumed approval cannot be reused to start the task again.
-
-**See progress and steer a running task (Preview):** Ask ChatGPT to check the current task via `codex.agent_show`: it reports the latest bounded agent message, plan and active item, not hidden reasoning or raw command output. While the *same turn* is still active, `codex.agent_steer` can add a new instruction without starting a separate Codex turn. For example: “Show the test progress; now prioritize regression checks and leave the installer unchanged.” Steer requires the exact active `turnId` and a stable `requestId`; stale turns, pending approvals and uncertain submissions are handled without blind replay. It does not change model, permissions or approval rules. Progress is read on demand, not a promised always-on push notification.
-
----
-
-## Before you install
-
-- **Platforms:** Windows, **Apple Silicon macOS (`arm64`)**, and **Ubuntu Linux (`x64`)** Technical Preview. Linux `arm64` has an unverified runtime branch and is outside accepted preview support. Intel Mac is not supported yet.
-- **Prerequisites:** **Node.js 22+** and one working local **Codex** installation. Codex Desktop is optional if a working CLI/runtime is available.
-- **Recommended dual runtime:** Recommended setup can also prepare a pinned official Codex runtime as an independent path for supported file/command work. It does not replace your existing local Codex and uses an isolated login.
-- **Browser:** Chrome or Edge plus the ChatGPT browser extension, connected in the profile you want to use.
-- **Excel:** the workbook must already be connected through the supported Document Control / Excel Add-in path. Codexless does not use CUA as the normal public Excel path.
-- **Personal ChatGPT plans tested:** Plus and Pro have both been verified working.
-- **How local access works:** ChatGPT does not connect directly to `localhost`. A typical path is **local Codexless → authenticated Tunnel / remote MCP endpoint → a ChatGPT custom app / developer-mode MCP connection**.
-- **Independent project:** Codexless is not an OpenAI product and does not imply OpenAI endorsement.
-
----
-
-## External launcher contract
-
-For the existing entry, runtime configuration, health probes, shutdown paths, and current limitations
-of external companion integration in 0.1.2 Preview, see the
-[external launcher contract](docs/EXTERNAL_LAUNCHER_CONTRACT.md).
-
----
-
-## Install
-
-Use the source tree from the release/tag you want to install. The installer checks Node.js and your existing local Codex; it does not install Node/npm or replace that local Codex.
-
-### Windows
-
-```powershell
-.\bin\codexless-install.cmd
-```
-
-Default install directory:
-
-```text
-%LOCALAPPDATA%\Codexless
-```
-
-Check a project:
-
-```powershell
-& "$env:LOCALAPPDATA\Codexless\bin\codexless-doctor.cmd" --cwd "C:\path\to\your\project"
-```
-
-Start HTTP:
-
-```powershell
-& "$env:LOCALAPPDATA\Codexless\bin\codexless-http.cmd"
-```
-
-Uninstall:
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:LOCALAPPDATA\Codexless\scripts\uninstall.ps1"
-```
-
-### Apple Silicon macOS
-
-```sh
-sh ./bin/codexless-install.sh
-```
-
-Default install directory:
-
-```text
-~/Library/Application Support/Codexless/app
-```
-
-Check a project:
-
-```sh
-"$HOME/Library/Application Support/Codexless/app/bin/codexless-doctor.sh" --cwd "/path/to/your/project"
-```
-
-Start HTTP:
-
-```sh
-"$HOME/Library/Application Support/Codexless/app/bin/codexless-http.sh"
-```
-
-Uninstall:
-
-```sh
-"$HOME/Library/Application Support/Codexless/app/bin/codexless-uninstall.sh"
-```
-
-### Ubuntu Linux (Preview)
-
-Linux uses the independent service name `codexless-linux` and XDG application, configuration, and state directories. Its isolated `CODEX_HOME` does not read or change your existing `~/.codex/config.toml` or copy its login credentials. Existing Windows/macOS connections remain separate.
-
-From a reviewed source checkout, with Node.js 22+, npm, and an existing native Codex CLI:
-
-```sh
-node scripts/linux.mjs install \
-  --codex /absolute/path/to/codex \
-  --cwd /absolute/path/to/authorized/project --trust-project
-"$HOME/.local/bin/codexless-linux-doctor"
-"$HOME/.local/bin/codexless-linux-stdio"
-```
-
-`--trust-project` explicitly trusts only that project in a newly created isolated Codex configuration; omit it to preserve trust decisions. Installation does not start a service or enable autostart. Commands are installed under `~/.local/bin`; use their absolute paths if that directory is absent from your `PATH`.
-
-See the [Linux core manual](README.linux.md) for isolation, permissions, lifecycle commands and testing. Managed Tunnel/keyring/desktop integration is deferred to a separate contribution.
-
-To upgrade or reinstall, get the newer release/tag and run the same installer again. User state stored outside the install tree is preserved. Codexless does not silently widen Codex trust, configure your Tunnel, or change browser file permissions for you.
-
----
-
-## FAQ
-
-### Does Codexless consume Codex quota?
-
-Supported model-free local tool actions do not call the Codex model, so they do not create Codex model usage. When Codexless actually calls the Codex model, normal Codex usage rules apply.
-
-Codexless does **not** increase, reset, transfer, merge, or bypass Codex usage limits or plan rules.
-
-### What if Codex quota reaches 0%?
-
-Model-free capabilities can continue to work. Operations that actually require a Codex model call cannot run until the applicable Codex usage is available again.
-
-### How much local access does it get?
-
-The permission ceiling follows effective local Codex authorization. Codexless may downscope an operation further; a remote caller cannot silently select a stronger local permission profile. Real permission/trust denials fail visibly. See [`SECURITY.md`](SECURITY.md).
-
-### Does ChatGPT get everything Codex can do?
-
-No. The **0.1.2 Preview public contract is 45 tools**, selected and tested as a public surface. Internal or household-only capabilities are not automatically promoted.
-
-### Do I need to change my existing ChatGPT → Codex workflow?
-
-No. Keep planning and discussing work in ChatGPT, let normal Chat use the local tools when they are enough, and call Codex explicitly when the model is genuinely needed.
-
-### Why can ChatGPT reach my local machine at all?
-
-ChatGPT receives only the Codexless tools exposed through an authenticated MCP path, for example:
-
-> **local Codexless → authenticated Tunnel / remote MCP endpoint → ChatGPT custom app / developer-mode MCP connection**
-
-Do not put Tunnel or endpoint credentials in the repository or public screenshots.
-
----
-
-## For people who want the internals
-
-- The exact public service contract is fixed in `src/surface-contracts.mjs` and covered by public contract tests.
-- The 0.1.2 Preview public surface contains **45 tools**, including `codex.agent_steer`. Call Codex uses fixed-text Approval / Result in normal Chat; neutral `agent_commit(taskId)` / `agent_decline(taskId)` remain part of the authoritative task path.
-- Public Excel contains the six typed tools listed above. The schema-reader and dynamic Excel gateway remain household-only in this release.
-- Browser exposes reviewed user-intent actions rather than raw browser internals.
-- Codex remains the local permission/trust authority; Codexless can downscope but not silently widen it.
-- Codexless uses Codex App Server and ChatGPT app/MCP integration surfaces rather than reverse-engineering a private UI.
-
-Run the public contract:
-
-```sh
-npm test
-```
-
-Run from source:
-
-```sh
-npm ci
-npm run start:stdio
-```
-
-HTTP:
-
-```sh
-npm run start:http
-```
-
-If automatic discovery cannot find an accepted Codex executable, `CODEX_BIN` can be set explicitly. On Windows, do not point it at an npm `.cmd` / `.ps1` shim.
-
----
-
-## For AI assistants
-
-If a user sends you this repository and asks whether they need it or whether it is safe, inspect the actual repository and the current machine first.
-
-Start with these facts: Codexless exposes a reviewed subset of local capabilities; it does not increase or bypass Codex usage; the permission ceiling comes from effective local Codex authorization; Browser is bounded rather than raw control; Excel public access is a six-tool typed Preview; and Codexless is an independent project rather than an OpenAI product.
-
----
-
-> **Stay in ChatGPT. Work on your local machine. Bring in Codex when you actually need it.**
+The unchanged historical packaging report refers to its original local `audit-packaging.mjs`; that harness is not distributed in this snapshot. The supplied `verify-evidence.py` independently verifies the published package and inventory, but does not rerun the historical fixture-construction or public-canonical-baseline checks. Their recorded outcomes remain in the packaging report/results.

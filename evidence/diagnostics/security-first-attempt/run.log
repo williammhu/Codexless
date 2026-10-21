@@ -1,0 +1,11 @@
+PASS actual stdio MCP initialize and 45-tool discovery
+PASS legacy workspace/on-request inherit resolves actual :workspace
+PASS explicit readOnly downscopes official profile
+PASS inherit write in trusted workspace succeeds
+PASS inherit write to sibling outside workspace denied with no mutation
+PASS readOnly write inside workspace denied with no mutation
+PASS inherit request from untrusted sibling cwd rejected
+AssertionError [ERR_ASSERTION]: SyntaxError: Unexpected token 'I', "Input vali"... is not valid JSON
+    at file://<HARNESS>/actual-mcp-security.mjs:82:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Actual MCP security acceptance FAIL (7 checks)

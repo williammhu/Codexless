@@ -1,0 +1,87 @@
+
+> codexless@0.1.2-preview.1 test:platform
+> node --test test/platform-regression.mjs
+
+TAP version 13
+# Subtest: Linux arm64 remains unverified and cannot select a supported release asset
+ok 1 - Linux arm64 remains unverified and cannot select a supported release asset
+  ---
+  duration_ms: 1.536546
+  type: 'test'
+  ...
+# Subtest: native linux/x64: trust containment preserves non-Linux baseline and Linux case boundaries
+ok 2 - native linux/x64: trust containment preserves non-Linux baseline and Linux case boundaries
+  ---
+  duration_ms: 7.906125
+  type: 'test'
+  ...
+# Subtest: native linux/x64: permission projection rejects absent roots and unknown policy fields
+ok 3 - native linux/x64: permission projection rejects absent roots and unknown policy fields
+  ---
+  duration_ms: 0.676314
+  type: 'test'
+  ...
+# Subtest: native linux/x64: binary probe launches native executable without a shell
+ok 4 - native linux/x64: binary probe launches native executable without a shell
+  ---
+  duration_ms: 15.399122
+  type: 'test'
+  ...
+# Subtest: native linux/x64: POSIX PATH lookup skips relative, directory and non-executable candidates
+ok 5 - native linux/x64: POSIX PATH lookup skips relative, directory and non-executable candidates
+  ---
+  duration_ms: 5.216067
+  type: 'test'
+  ...
+# Subtest: native linux/x64: graceful server shutdown cleans launch resources once
+ok 6 - native linux/x64: graceful server shutdown cleans launch resources once
+  ---
+  duration_ms: 58.872668
+  type: 'test'
+  ...
+# Subtest: native linux/x64: forced server shutdown cleans launch resources once
+ok 7 - native linux/x64: forced server shutdown cleans launch resources once
+  ---
+  duration_ms: 1059.182981
+  type: 'test'
+  ...
+# Subtest: native linux/x64: request timeout terminates peer and permits a clean restart
+ok 8 - native linux/x64: request timeout terminates peer and permits a clean restart
+  ---
+  duration_ms: 161.910172
+  type: 'test'
+  ...
+# Subtest: native linux/x64: unexpected exit rejects pending RPC and cleans before restart
+ok 9 - native linux/x64: unexpected exit rejects pending RPC and cleans before restart
+  ---
+  duration_ms: 57.072138
+  type: 'test'
+  ...
+# [codex-app-server] cleanup failure: fixture cleanup failure
+# Subtest: native linux/x64: launch cleanup failures surface and are not replayed
+ok 10 - native linux/x64: launch cleanup failures surface and are not replayed
+  ---
+  duration_ms: 36.061278
+  type: 'test'
+  ...
+# Subtest: native linux/x64: malformed initialize fails closed and performs private launch cleanup
+ok 11 - native linux/x64: malformed initialize fails closed and performs private launch cleanup
+  ---
+  duration_ms: 34.497408
+  type: 'test'
+  ...
+# Subtest: native linux/x64: service identity and state preserve existing platform defaults
+ok 12 - native linux/x64: service identity and state preserve existing platform defaults
+  ---
+  duration_ms: 0.553512
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1502.571132

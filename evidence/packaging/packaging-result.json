@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "environment": {
+    "os": "Ubuntu 22.04.5 LTS",
+    "platform": "linux",
+    "architecture": "x64",
+    "node": "v22.23.3",
+    "npm": "10.9.9"
+  },
+  "source": {
+    "baseRevision": "394e8f4d356f064c27143a8580c3ba4028373e21",
+    "candidateTree": "3f44470de142222788f8f6e22e7926684062ad97",
+    "changedFileCount": 12,
+    "publicBase": "1f4606b7f2d0766cb4405182f4dd81a001d1f814",
+    "patches": [
+      {
+        "filename": "01-pr-preview-fixes.patch",
+        "sha256": "a1ba2d3944bb38147911390f30b63ae5db0ed30f59ab0759e3a68863e60e7966",
+        "status": "PASS"
+      },
+      {
+        "filename": "02-inherited-windows-uninstall.patch",
+        "sha256": "5bb9be82a0e341a7b2c18d0c591bf6f587822e710bbda349e40b5c5ea7d45915",
+        "status": "PASS"
+      }
+    ],
+    "buildId": "31dc0d0614200479c14822ea5536ffc4abefa0e52af486e9fad2728d7ded1b3d",
+    "manifestSourceRevision": "394e8f4d356f064c27143a8580c3ba4028373e21",
+    "manifestFileCount": 124,
+    "manifestRegeneration": "PASS",
+    "workingTreeUnstagedDiff": "NONE"
+  },
+  "package": {
+    "filename": "codexless-0.1.2-preview.1.tgz",
+    "sha256": "43c7e2c6fe24a6b87a91bdeccd3fa574f96da6dca887daec9c605ca91ce497d4",
+    "npmShasum": "1c73876ce342f5ec3eab05ca30917c8df95cd188",
+    "npmIntegrity": "sha512-0PwphM5DYm3d0x6Ky0vFTubZeQ2pkUVvC7n2S11Oa0njdYUsgWBGHpXL7wYSN7BnVWk7Tc/Q3bEGFmcxrfIILg==",
+    "fileCount": 125,
+    "manifestedFilesVerified": 124,
+    "manifestFileVerified": true,
+    "linuxLauncherCount": 16,
+    "launchers": [
+      {
+        "path": "bin/codexless-linux",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-disable",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-doctor",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-enable",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-http",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-install",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-login",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-logs",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-restart",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-rollback",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-start",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-status",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-stdio",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-stop",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-uninstall",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      },
+      {
+        "path": "bin/codexless-linux-update",
+        "lfOnly": true,
+        "executable": true,
+        "shellSyntax": "PASS"
+      }
+    ],
+    "readmeLinuxPresent": true,
+    "windowsUninstallCmdPresent": true,
+    "excludedOptionalOrPrivateFiles": [],
+    "secretAndPersonalPathScan": "PASS"
+  },
+  "inheritedPackagingFix": {
+    "upstreamBaseOmittedUninstallerFromPackageFiles": true,
+    "upstreamBaseUninstallerExists": true,
+    "patch02Files": [
+      "config/release-manifest.json",
+      "package.json"
+    ],
+    "keptSeparate": true,
+    "installedWindowsUninstallWrapperRemoval": "Existing installer staging behavior unchanged; npm artifact presence is not production Windows lifecycle certification."
+  },
+  "windowsFixture": {
+    "construction": "PASS",
+    "method": "Exact candidate fixture builder executed on Linux, without PowerShell installer body",
+    "linuxReadmeManifested": true,
+    "productionWindowsInstaller": "NOT RUN (Linux host)"
+  },
+  "canonicalPublicBaseline": [
+    {
+      "path": "src/construction-tools.mjs",
+      "sha256": "40b78c253ff543ae9bc2f7ac0319fd363a57efcf637da6bf498bdee85d0f7cfe",
+      "publicBaselineByteParity": "PASS"
+    },
+    {
+      "path": "src/browser-tools.mjs",
+      "sha256": "5db635f7f1057da69b8192e83fe1bc18083ded2e8e385dcf9dfe3f0af72b46a3",
+      "publicBaselineByteParity": "PASS"
+    },
+    {
+      "path": "src/codex-browser-executor.mjs",
+      "sha256": "70d4e35036505012a5fee9250f3b50281bd4998a9e9eaa8e4aea775817b6ff71",
+      "publicBaselineByteParity": "PASS"
+    }
+  ],
+  "privateHouseholdCanonicalParity": "NOT RUN / NOT CERTIFIED; private household source and gate unavailable",
+  "commands": [
+    "node --version; npm --version; cat /etc/os-release; uname -m",
+    "git rev-parse HEAD; git write-tree; git diff --name-only; git diff --cached --name-only; git diff --cached --check",
+    "npm pack --ignore-scripts --json --offline --cache <packaging-output>/npm-cache --pack-destination <packaging-output>",
+    "node <packaging-output>/audit-packaging.mjs",
+    "git show <public-base>:<canonical-file>; git check-attr eol -- <linux-launcher>"
+  ]
+}
